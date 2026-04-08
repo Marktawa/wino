@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <title>Winteriors - Beautiful Sofas Zambia</title>
+
+    <style>
+        /* Base Reset */
+        *, *::before, *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        }
+
+        html {
+        -webkit-text-size-adjust: 100%;
+        }
+
+        body {
+        line-height: 1.5;
+        -webkit-font-smoothing: antialiased;
+        }
+
+        img, picture, video, canvas, svg {
+        display: block;
+        max-width: 100%;
+        }
+
+        input, button, textarea, select {
+        font: inherit;
+        }
+
+        p, h1, h2, h3, h4, h5, h6 {
+        overflow-wrap: break-word;
+        }
+
+        #root, #__next {
+        isolation: isolate;
+        }
+
+        /* Variables */
+        :root {
+            --text: #292929;
+            --bg: #FFFFFF;
+            --bg-subtle: #F5F5F5;
+            --border:    #EAEAEA;
+            --accent: #D1BC92;
+        }
+
+        .inverted {
+            --text: #FFFFFF;
+            --bg: #292929;
+        }
+
+        /* Custom Font */
+        @font-face {
+            font-family: 'Winteriors';
+            src: url('font/Winteriors.woff2') format('woff2'),
+                url('font/Winteriors.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        /* Body */
+        body {
+            margin: 0 auto;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+        }
+
+        /* Top Bar */
+        .topbar-wrapper {
+            color: var(--text);
+            background: var(--bg);
+        }
+
+        .topbar {
+            max-width: 1140px;
+            margin: 0 auto;
+            height: clamp(30px, 4vw, 36px);
+            display: flex;
+            justify-content: space-between;
+            padding: 0 8px 0 8px;
+        }
+
+        .topbar .email {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            font-size: clamp(12px, 1.5vw, 14px);
+            line-height: 1;
+        }
+
+        .topbar .socials {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .topbar .socials a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: clamp(20px, 3vw, 24px);
+            height: clamp(20px, 3vw, 24px);
+            border-radius: 50%;
+            background: #ffffff;
+            color: #292929;
+            text-decoration: none;
+            font-size: clamp(10px, 1.5vw, 12px);
+        }
+
+        .topbar .socials a:hover {
+            background: #D1BC92;
+            opacity: 0.9;
+            transform: scale(0.9);
+        }
+
+        /*Header*/
+        .header-wrapper {
+            color: var(--text);
+            background: var(--bg);
+        }
+
+        header {
+            max-width: 1140px;
+            margin: 0 auto;
+            height: 64px;
+            display: flex;
+            justify-content: space-between;
+            padding: 6px 8px 6px 8px;
+        }
+
+        header .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        header .logo img {
+            height: 36px;
+        }
+
+        h1 {
+            font-family: 'Winteriors', 'Times New Roman', serif;
+            text-transform: uppercase;
+            letter-spacing: 6;
+            font-size: 1rem;
+        }
+
+        header .quicklinks {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        header a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        header .menu {
+            position: relative;
+            cursor: pointer;
+            align-self: center;
+         }
+
+         .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            min-width: 160px;
+            flex-direction: column;
+            z-index: 100;
+         }
+
+         .dropdown a {
+            padding: 12px 16px;
+            display: block;
+            color: var(--text);
+         }
+
+         .dropdown a:hover {
+            background: var(--bg-subtle);
+         }
+
+         .dropdown.open {
+            display: flex;
+         }
+
+         .hero-wrapper {
+            background: var(--bg-subtle);
+         }
+
+         .hero {
+            max-width: 1140px;
+            margin: 0 auto;
+            display: grid;
+            padding: clamp(30px, 6vw, 60px) 16px clamp(60px, 10vw, 180px) 16px;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: center;
+         }
+
+         .hero h2 {
+            text-transform: uppercase;
+            font-size: clamp(28px, 5vw, 51px);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            letter-spacing: 1.5px;
+         }
+
+         .hero p {
+            margin-bottom: 2.5rem;
+            color: #7A7A7A;
+         }
+
+         .hero a {
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            background: #292929;
+            color: #FFFFFF;
+            padding: 16px 36px;
+            font-weight: bold;
+         }
+
+         .hero a:hover {
+            background: #FFFFFF;
+            color: #292929;
+            border: 1px solid #292929;
+         }
+
+         .hero-image {
+            width: min(600px, 92vw);
+            height: min(600px, 92vw);
+            border-radius: 50%;
+            background: #EDE8DF;
+            justify-self: center;
+            overflow: hidden;
+         }
+
+         .hero-image img {
+            width: 100%;
+            height: 100%;
+         }
+
+         @media (max-width: 768px) {
+            .quicklinks a {
+                display: none;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+            }
+            .hero-image {
+                justify-self: center;
+                order: -1;
+            }
+        }
+
+         /* Categories Section */
+         .categories-wrapper {
+            background: var(--bg);
+         }
+
+         .categories {
+            max-width: 1140px;
+            margin: 30px auto 90px auto;
+            padding: 30px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+         }
+
+         .category-card {
+            background: var(--bg-subtle);
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            text-decoration: none;
+            color: var(--text);
+            transition: background 0.2s;
+         }
+
+         .category-card:hover {
+            background: #EDEAE4;
+            font-weight: bolder;
+         }
+
+         .category-card .tag {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--accent); /* #D1BC92 */
+            font-weight: 500;
+         }
+
+         .category-card h3 {
+             font-size: 18px;
+             text-transform: uppercase;
+             letter-spacing: 1px;
+             font-weight: 700;
+             margin-bottom: 0.5rem;
+         }
+
+         .category-card .shop-link {
+             font-size: 12px;
+             text-transform: uppercase;
+             letter-spacing: 1px;
+             display: flex;
+             align-items: center;
+             gap: 4px;
+         }
+
+         .category-card .shop-link::after {
+            content: '→';
+         }
+
+         .section-heading-wrapper {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 8px;
+         }
+
+         .section-heading {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 40px;
+         }
+
+         .section-heading::before,
+         .section-heading::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--border);
+         }
+
+         .section-heading h2 {
+            font-size: 24px;
+            text-transform: uppercase;
+            letter-spacing: 1.6px;
+            font-weight: 700;
+            white-space: nowrap;
+         }
+
+         .best-selling-wrapper {
+            background: var(--bg);
+            padding-top: 10px;
+         }
+
+         .best-selling-grid {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 8px 60px 8px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+         }
+
+         .product-card {
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            color: var(--text);
+            gap: 0.75rem;
+         }
+
+         .product-card-image {
+            background: var(--bg-subtle);
+            aspect-ratio: 3 / 4;
+            overflow: hidden;
+         }
+
+         .product-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+         }
+
+         .product-card:hover .product-card-image img {
+            transform: scale(1.04);
+         }
+
+         .product-card-info {
+            display: flex;
+            justify-content: space-between;
+         }
+
+         .product-card-info .name {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+         }
+
+         .product-card-info .price {
+            font-size: 13px;
+            color: 7A7A7A;
+         }
+
+         /* Featured Products Section */
+         .featured-wrapper {
+            background: var(--bg);
+            padding-top: 60px;
+        }
+
+         .featured-products {
+            max-width: 1140px;
+            margin: 0 auto 60px;
+            padding: 0 8px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 280px 280px;
+            gap: 25px;
+        }
+
+        /* Base Card Styling */
+        .featured-card {
+            background: var(--bg-subtle);
+            text-decoration: none;
+            color: var(--text);
+            padding: 40px;
+            display: flex;
+            transition: background 0.3s ease;
+            overflow: hidden; /* Keeps images neatly inside */
+        }
+
+        .featured-card:hover {
+            background: #EAEAEA;
+        }
+
+        .featured-card.tall {
+            grid-row: 1 / 3; /* Spans both rows */
+        }
+
+        /* Common Typography Inside Cards */
+        .featured-card h3 {
+            font-size: 18px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .featured-card .link-group p {
+            font-size: 14px;
+            color: #999999;
+            margin-bottom: 5px;
+        }
+
+        .featured-card .discover-link {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* Common Image Styling */
+        .featured-card img {
+            max-width: 100%;
+            object-fit: contain;
+            transition: transform 0.4s ease;
+        }
+
+        .featured-card:hover img {
+            transform: scale(1.04);
+        }
+
+        /* Layout 1: Image on Left, Text on Right */
+        .card-flex-row {
+            flex-direction: row;
+            gap: 20px;
+        }
+
+        .card-flex-row .image-wrapper {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card-flex-row .content-wrapper {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Pushes Title to top, Link to bottom */
+            align-items: flex-end;
+            text-align: right;
+        }
+
+        /* Layout 2: Text on Top, Image on Bottom */
+        .card-flex-col {
+            flex-direction: column;
+        }
+
+        .card-flex-col .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            text-align: right;
+            gap: 15px; 
+        }
+
+        .card-flex-col .image-wrapper {
+            flex: 1;
+            display: flex;
+            align-items: flex-end; /* Anchors the image to the bottom */
+            justify-content: center;
+        }
+
+        /* Our Clients Section */
+        .clients-heading {
+            text-align: center;
+            font-size: 32px;
+            font-weight: 600;
+            color: var(--text);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+        }
+    
+        .our-clients-section {
+            padding: 50px 0 100px 0;
+            overflow: hidden; /* This is the "window" */
+            max-width: 1140px;
+            margin: 0 auto;
+        }
+
+        .clients-track {
+            display: flex;
+            align-items: center;
+            gap: 60px; /* Consistent spacing is vital for the math to work */
+            width: max-content;
+            
+            /* Use 'ease-in-out' for a premium feel during the slide */
+            animation: step-scroll 50s ease-in-out infinite;
+        }
+
+        .clients-track img {
+            height: auto;
+            width: 150px; /* Fixed width makes the stepping math much easier */
+            object-fit: contain;
+            flex-shrink: 0;
+        }
+
+        @keyframes step-scroll {
+            0%, 3%   { transform: translateX(0); }
+            6%, 9%   { transform: translateX(-210px); }
+            12%, 15% { transform: translateX(-420px); }
+            18%, 21% { transform: translateX(-630px); }
+            24%, 27% { transform: translateX(-840px); }
+            30%, 33% { transform: translateX(-1050px); }
+            36%, 39% { transform: translateX(-1260px); }
+            42%, 45% { transform: translateX(-1470px); }
+            48%, 51% { transform: translateX(-1680px); }
+            54%, 57% { transform: translateX(-1890px); }
+            60%, 63% { transform: translateX(-2100px); }
+            66%, 69% { transform: translateX(-2280px); }
+
+            /* 100%: Reset to start */
+            100% { transform: translateX(0); }
+        } 
+        
+        .clients-track:hover {
+            animation-play-state: paused;
+        }
+
+        /* Footer */
+        .footer-wrapper {
+            background: var(--bg-subtle);
+            border-top: 1px solid var(--border);
+        }
+
+        .footer-main {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 60px 8px 40px 8px;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+        }
+
+        .footer-col h4 {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--text);
+            display: inline-block;
+        }
+
+        .footer-col ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer-col ul li a {
+            text-decoration: none;
+            color: #7A7A7A;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--text);
+        }
+
+        .footer-contact {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 24px;
+        }
+
+        .footer-contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 14px;
+            color: #7A7A7A;
+        }
+
+        .footer-contact-item i {
+            margin-top: 5px;
+            font-size: 13px;
+            color: var(--text);
+            width: 14px;
+            flex-shrink: 0;
+        }
+
+        .footer-socials {
+            display: flex;
+            gap: 10px;
+            margin-top: 8px;
+        }
+
+        .footer-socials a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: var(--text);
+            color: var(--bg);
+            text-decoration: none;
+            font-size: 13px;
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        .footer-socials a:hover {
+            background: var(--accent);
+            transform: scale(0.95);
+        }
+
+        /* Footer Bottom Bar */
+        .footer-bottom-wrapper {
+            background: var(--bg-subtle);
+        }
+
+        .footer-bottom {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 20px 8px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-top: 1px solid var(--border);
+        }
+
+        .footer-bottom-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            color: var(--text);
+        }
+
+        .footer-bottom-logo img {
+            height: 40px;
+        }
+
+        .footer-bottom-logo span {
+            font-family: 'Winteriors', 'Times New Roman', serif;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        .footer-copyright {
+            font-size: 12px;
+            color: #7A7A7A;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="topbar-wrapper inverted">
+        <div class="topbar">
+            <div class="email">
+                <i class="fa-solid fa-envelope"></i>
+                <div>hello@winteriorz.com</div>
+            </div>
+            <div class="socials">
+                <a href="https://facebook.com/winteriorszambia" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://wa.me/c/260776987155" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://instagram.com/winteriorszambia" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="header-wrapper">
+        <header>
+            <div class="logo">
+                <img src="logo-white.png" alt="Winteriors logo" />
+                <h1>Winteriors</h1>
+            </div>
+            <nav class="quicklinks">
+                <a href="#">Home</a>
+                <a href="#">Shop</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </nav>
+            <div class="menu">
+                <i class="fa-solid fa-bars" id="menu-toggle"></i>
+                <nav class="dropdown">
+                    <a href="#">Home</a>
+                    <a href="#">Shop</a>
+                    <a href="#">About</a>
+                    <a href="#">Contact</a>
+                </nav>
+            </div>
+        </header>
+    </div>
+
+    <div class="hero-wrapper">
+        <div class="hero">
+            <div>
+                <h2>Celebrating Living Spaces!</h2>
+                <p>At Winteriors, we are passionate about making your living or communal spaces worth celebrating! We specialise in the supply of fashionable and affordable furniture for both residential and commercial spaces, all the while working towards being the best furniture hub where you as our customer are valued individually and are given the best value for your money!</p>
+                <a href="#">Shop Now</a>
+            </div>
+            <div class="hero-image">
+                <img src="hero-1024x768.jpeg" alt="Sofa" />
+            </div>
+        </div>
+    </div>
+
+    <!--
+    <div class="sample">
+        <img src="sample.png" />
+    </div>
+-->
+
+    <div class="categories-wrapper">
+        <div class="categories">
+            <a class="category-card" href="#">
+                <span class="tag">New Arrivals</span>
+                <h3>Furniture</h3>
+                <span class="shop-link">Shop Now</span>
+            </a>
+            <a class="category-card" href="#">
+                <span class="tag">Discount</span>
+                <h3>Living Room</h3>
+                <span class="shop-link">Shop Now</span>
+            </a>
+            <a class="category-card" href="#">
+                <span class="tag">Sale</span>
+                <h3>Bedroom</h3>
+                <span class="shop-link">Shop Now</span>
+            </a>
+            <a class="category-card" href="#">
+                <span class="tag">Sale</span>
+                <h3>Hotel</h3>
+                <span class="shop-link">Shop Now</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="best-selling-wrapper">
+        <div class="section-heading-wrapper">
+            <div class="section-heading">
+                <h2>Best Selling</h2>
+            </div>
+        </div>
+        <div class="best-selling-grid">
+            <a class="product-card" href="#">
+                <div class="product-card-image">
+                    <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=800&auto=format&fit=crop" alt="Bed">
+                </div>
+                <div class="product-card-info">
+                    <span class="name">Double Bed</span>
+                    <span class="price">K 4,500</span>
+                </div>
+            </a>
+            <a class="product-card" href="#">
+                <div class="product-card-image">
+                    <img src="https://images.unsplash.com/photo-1578653282816-a508bd2d0435?q=80&w=800&auto=format&fit=crop" alt="Sofa">
+                </div>
+                <div class="product-card-info">
+                    <span class="name">Velvet Armchair</span>
+                    <span class="price">K 3,600</span>
+                </div>
+            </a>
+            <a class="product-card" href="#">
+                <div class="product-card-image">
+                    <img src="https://plus.unsplash.com/premium_photo-1675744019321-f90d6d719da7?q=80&w=800&auto=format&fit=crop" alt="Table">
+                </div>
+                <div class="product-card-info">
+                    <span class="name">Dining Table</span>
+                    <span class="price">K 1,700</span>
+                </div>
+            </a>
+            <a class="product-card" href="#">
+                <div class="product-card-image">
+                    <img src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?q=80&w=800&auto=format&fit=crop" alt="Chair">
+                </div>
+                <div class="product-card-info">
+                    <span class="name">Lounge Chair</span>
+                    <span class="price">K 2,300</span>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- Featured Products Section -->
+    <div class="featured-wrapper">
+        <div class="section-heading-wrapper">
+            <div class="section-heading">
+                <h2>Featured Products</h2>
+            </div>
+        </div>
+    </div>
+
+    <section class="featured-products">
+
+    <!-- Left Tall Block (Row Layout) -->
+    <a href="#" class="featured-card tall card-flex-row">
+        <div class="image-wrapper">
+            <img src="lamp.png" alt="Lamp">
+        </div>
+        <div class="content-wrapper">
+            <h3>Lamp & Table</h3>
+            <div class="link-group">
+                <p>Discover this week's new arrivals</p>
+                <span class="discover-link">Discover Now &rarr;</span>
+            </div>
+        </div>
+    </a>
+
+    <!-- Right Top Short Block (Row Layout) -->
+    <a href="#" class="featured-card card-flex-row">
+        <div class="image-wrapper">
+            <img src="dresser.jpeg" alt="Dresser">
+        </div>
+        <div class="content-wrapper">
+            <h3>Dresser</h3>
+            <div class="link-group">
+                <p>Discover this week's new arrivals</p>
+                <span class="discover-link">Discover Now &rarr;</span>
+            </div>
+        </div>
+    </a>
+
+    <!-- Right Bottom Short Block (Column Layout) -->
+    <a href="#" class="featured-card card-flex-col">
+        <div class="content-wrapper">
+            <h3>Chair & Sofa</h3>
+            <div class="link-group">
+                <p>Discover this week's new arrivals</p>
+                <span class="discover-link">Discover Now &rarr;</span>
+            </div>
+        </div>
+        <div class="image-wrapper">
+            <img 
+            style="margin-top: -200px; margin-left: -180px; width: 90%; object-fit: cover;"
+            src="Lilian-4-seater-Sofa.png" alt="Sofa">
+        </div>
+    </a>
+
+</section>
+
+<section class="our-clients-section">
+    <h2 class="clients-heading">Our Clients</h2>
+    
+    <div class="clients-track">
+        <img src="https://winteriorz.com/wp-content/uploads/2024/08/i0_4qnu3pwt8yfc.png" alt="NAVA" >
+        <img src="https://winteriorz.com/wp-content/uploads/2024/08/download__3_-removebg-preview-3.png" alt="Protea">
+        <img src="https://winteriorz.com/wp-content/uploads/2024/08/download__3_-removebg-preview-2-1.png" alt="B">
+        <img src="https://winteriorz.com/wp-content/uploads/2024/08/bet_cure-removebg-preview-1.png" alt="Beit Cure">
+        <img src="https://winteriorz.com/wp-content/uploads/2024/08/1631307900844-removebg-preview-1.png" alt="Good Nature Agro">
+        <img src="https://winteriorz.com/wp-content/uploads/2024/08/Ciela_Logotype_with_Descriptor_RGB_HR-01-1024x502-1.png" alt="Ciela Resort & Spa" >
+        <img src="https://winteriorz.com/wp-content/uploads/2024/08/Ecobank_Logo_EN.png" alt="Ecobank">
+        <img src="https://winteriorz.com/wp-content/uploads/2024/08/anglo-american-plc-mining-quellaveco-mine-company-america.jpg" alt="Anglo American">
+        <img src="https://winteriorz.com/wp-content/uploads/2024/08/giraffecreativeslogoDARK-2.png" alt="Giraffe Creatives">
+        <img src="https://winteriorz.com/wp-content/uploads/2024/08/dlsl-logo-black-1.png" alt="David Livingstone">
+        <img src="https://winteriorz.com/wp-content/uploads/2024/08/download-8-1.png" alt="Corpus">
+        <img src="https://winteriorz.com/wp-content/uploads/2024/08/Chengelo-Colour-Logo-TransparentBKG-e1724677894428.png" alt="Chengelo">
+        <img src="https://winteriorz.com/wp-content/uploads/2024/08/download-4-e1724677678371.jpg" alt="Globalheart">
+        <img src="https://winteriorz.com/wp-content/uploads/2024/08/6240dcd0d2da0f766d915b46-removebg-preview-1.png" alt="Matanga">
+        <img src="https://winteriorz.com/wp-content/uploads/2024/08/download-6-1.png" alt="KOZO Hotels & Resorts">
+        <img src="https://winteriorz.com/wp-content/uploads/2024/08/cropped-logo-png-1.png" alt="SEC">
+
+    </div>
+</section>
+    
+<div class="footer-wrapper">
+    <div class="footer-main">
+
+        <!-- About Us -->
+        <div class="footer-col">
+            <h4>About Us</h4>
+            <div class="footer-contact">
+                <div class="footer-contact-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Showroom 103, Arcades Mall, Great East Road, Lusaka, Zambia</span>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Showroom 103, Chamba Valley Shopping Mall, Meanwood Kwamwena Valley, Lusaka, Zambia.</span>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>hello@winteriorz.com</span>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>+260 979 490816</span>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>+260 776 987155</span>
+                </div>
+            </div>
+            <div class="footer-socials">
+                <a href="https://facebook.com/winteriorszambia" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://instagram.com/winteriorszambia" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://wa.me/c/260776987155" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+
+        <!-- Other Pages -->
+        <div class="footer-col">
+            <h4>Menu</h4>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#">Our Clients</a></li>
+                <li><a href="#">Best Products</a></li>
+                <li><a href="#">Why Choose us</a></li>
+                <li><a href="#">Our Team</a></li>
+                <li><a href="#">FAQ</a></li>
+            </ul>
+        </div>
+
+        <!-- Information -->
+        <div class="footer-col">
+            <h4>Information</h4>
+            <ul>
+                <li><a href="#">WhatsApp</a></li>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Community</a></li>
+                <li><a href="#">Channel</a></li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+<!-- Footer Bottom Bar -->
+<div class="footer-bottom-wrapper">
+    <div class="footer-bottom">
+        <a class="footer-bottom-logo" href="#">
+            <img src="logo-white.png" alt="Winteriors logo" />
+            <span>Winteriors</span>
+        </a>
+        <span class="footer-copyright">Copyright &copy; 2026. All Rights Reserved.</span>
+    </div>
+</div>
+    <script>
+        const toggle = document.getElementById('menu-toggle');
+        const dropdown = document.querySelector('.dropdown');
+
+        toggle.addEventListener('click', () => {
+            dropdown.classList.toggle('open');
+        });
+
+        // Close when clicking anywhere outside
+        document.addEventListener('click', (e) => {
+            if (!toggle.contains(e.target)) {
+                dropdown.classList.remove('open');
+            }
+        });
+    </script>
+</body>
+</html>
