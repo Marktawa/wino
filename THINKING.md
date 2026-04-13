@@ -1,4 +1,21 @@
+**Job Proposal**
+- Introduction with Greetings
+- Job Role Overview
+- Why?
+- Acknowledgement of Work
+- Job Role In-depth
+- First steps I will take once I get the role
+- Who am I?
+- Why I am suitable for the role?
+- Conclusion (Expression of good faith)
 
+I have decided to revise the approach of this application. I am rechanneling my effort towards what it means to be a salesman. That is to say an online salesman. One who generates leads, one who closes leads. What does it mean to sell furniture to an online audience. Of course my starting point is the clean up of the website. I hope it will work as a sign of good will and hopefully be the necessary entry point that helps facilitate them considering the full role. Hopefully, it can make them see my proposal in a good light and take it in good faith. 
+
+Let's look at what all this involves. For a start this involves the job proposal, the document detailing the website fix, my CV, application letter (so the application letter is the job proposal).
+
+How will the application be sent? The application will be sent via email. The job proposal will be compiled both as an html/css email and as a pdf. The videos will be unlisted videos placed on YouTube. Links will be shared within the email. An end section like "Conclusion" or "References" will be placed at the end with the links to the videos, pdfs. A webpage will be created with the links to the pdf, videos as well. If time is available.
+
+A word of caution. The website fix will not involve zeroing in on code. That's not the purpose. I believe the time will come for fixating on the attributes of the website. But now is not the time.
 
 ---
 
