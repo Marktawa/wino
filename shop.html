@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <title>Shop — Winteriors</title>
+
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --text: #292929;
+            --bg: #FFFFFF;
+            --bg-subtle: #F5F5F5;
+            --border: #EAEAEA;
+            --accent: #D1BC92;
+        }
+
+        .inverted {
+            --text: #FFFFFF;
+            --bg: #292929;
+        }
+
+        @font-face {
+            font-family: 'Winteriors';
+            src: url('font/Winteriors.woff2') format('woff2'),
+                 url('font/Winteriors.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        body {
+            margin: 0 auto;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+        }
+
+        /* ── Top Bar ── */
+        .topbar-wrapper {
+            color: var(--text);
+            background: var(--bg);
+        }
+
+        .topbar {
+            max-width: 1140px;
+            margin: 0 auto;
+            height: 36px;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 8px;
+        }
+
+        .topbar .email {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            font-size: 14px;
+            line-height: 1;
+        }
+
+        .topbar .socials {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .topbar .socials a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: #ffffff;
+            color: #292929;
+            text-decoration: none;
+            font-size: 12px;
+        }
+
+        .topbar .socials a:hover {
+            background: #D1BC92;
+            opacity: 0.9;
+            transform: scale(0.9);
+        }
+
+        /* ── Header ── */
+        .header-wrapper {
+            color: var(--text);
+            background: var(--bg);
+            border-bottom: 1px solid var(--border);
+        }
+
+        header {
+            max-width: 1140px;
+            margin: 0 auto;
+            height: 64px;
+            display: flex;
+            justify-content: space-between;
+            padding: 6px 8px;
+        }
+
+        header .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        header .logo img {
+            height: 36px;
+        }
+
+        h1 {
+            font-family: 'Winteriors', 'Times New Roman', serif;
+            text-transform: uppercase;
+            letter-spacing: 6px;
+            font-size: 1rem;
+        }
+
+        header .quicklinks {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        header a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        header .quicklinks a {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding-bottom: 2px;
+        }
+
+        header .quicklinks a.active {
+            border-bottom: 2px solid var(--accent);
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        /* ── Page Banner ── */
+        .page-banner-wrapper {
+            background: var(--bg-subtle);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .page-banner {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 48px 8px 40px 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            text-align: center;
+        }
+
+        .page-banner h2 {
+            font-size: 38px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-weight: 700;
+        }
+
+        .breadcrumb {
+            font-size: 13px;
+            color: #7A7A7A;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .breadcrumb a {
+            color: #7A7A7A;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            color: var(--accent);
+        }
+
+        .breadcrumb span {
+            margin: 0 6px;
+        }
+
+        /* ── Filter Bar ── */
+        .filter-bar-wrapper {
+            background: var(--bg);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .filter-bar {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 8px;
+            height: 52px;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .filter-bar a {
+            text-decoration: none;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            color: #7A7A7A;
+            padding-bottom: 3px;
+            transition: color 0.2s;
+        }
+
+        .filter-bar a:hover {
+            color: var(--text);
+        }
+
+        .filter-bar a.active {
+            color: var(--text);
+            font-weight: 600;
+            border-bottom: 2px solid var(--accent);
+        }
+
+        /* ── Shop Grid ── */
+        .shop-wrapper {
+            background: var(--bg);
+            padding: 50px 0 80px 0;
+        }
+
+        .shop-grid {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 8px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        /* ── Product Card (inherits home.html style) ── */
+        .product-card {
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            color: var(--text);
+            gap: 0.75rem;
+        }
+
+        .product-card-image {
+            background: var(--bg-subtle);
+            aspect-ratio: 3 / 4;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .product-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .product-card:hover .product-card-image img {
+            transform: scale(1.04);
+        }
+
+        .product-card-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .product-card-info .name {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        .product-card-info .price {
+            font-size: 13px;
+            color: #7A7A7A;
+        }
+
+        /* ── Clients Strip ── */
+        .clients-heading {
+            text-align: center;
+            font-size: 32px;
+            font-weight: 600;
+            color: var(--text);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+        }
+
+        .our-clients-section {
+            padding: 50px 0 100px 0;
+            overflow: hidden;
+            max-width: 1140px;
+            margin: 0 auto;
+        }
+
+        .clients-track {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            width: max-content;
+            animation: step-scroll 50s ease-in-out infinite;
+        }
+
+        .clients-track img {
+            height: auto;
+            width: 150px;
+            object-fit: contain;
+            flex-shrink: 0;
+        }
+
+        @keyframes step-scroll {
+            0%, 3%   { transform: translateX(0); }
+            6%, 9%   { transform: translateX(-210px); }
+            12%, 15% { transform: translateX(-420px); }
+            18%, 21% { transform: translateX(-630px); }
+            24%, 27% { transform: translateX(-840px); }
+            30%, 33% { transform: translateX(-1050px); }
+            36%, 39% { transform: translateX(-1260px); }
+            42%, 45% { transform: translateX(-1470px); }
+            48%, 51% { transform: translateX(-1680px); }
+            54%, 57% { transform: translateX(-1890px); }
+            60%, 63% { transform: translateX(-2100px); }
+            66%, 69% { transform: translateX(-2280px); }
+            100%     { transform: translateX(0); }
+        }
+
+        .clients-track:hover {
+            animation-play-state: paused;
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 768px) {
+            .shop-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.25rem;
+            }
+
+            .page-banner h2 {
+                font-size: 28px;
+            }
+
+            .filter-bar {
+                gap: 1.25rem;
+                overflow-x: auto;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .shop-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="topbar-wrapper inverted">
+        <div class="topbar">
+            <div class="email">
+                <i class="fa-solid fa-envelope"></i>
+                <div>info@winteriorz.com</div>
+            </div>
+            <div class="socials">
+                <a href="https://facebook.com/winteriorszambia" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://wa.me/c/260776987155" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://instagram.com/winteriorszambia" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <div class="header-wrapper">
+        <header>
+            <div class="logo">
+                <img src="logo-white.png" alt="Winteriors logo" />
+                <h1>Winteriors</h1>
+            </div>
+            <nav class="quicklinks">
+                <a href="index.html">Home</a>
+                <a href="shop.html" class="active">Shop</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </nav>
+        </header>
+    </div>
+
+    <!-- Page Banner -->
+    <div class="page-banner-wrapper">
+        <div class="page-banner">
+            <h2>Shop</h2>
+            <p class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                Shop
+            </p>
+        </div>
+    </div>
+
+    <!-- Filter Bar -->
+    <div class="filter-bar-wrapper">
+        <div class="filter-bar">
+            <a href="#" class="active">All</a>
+            <a href="#">Sofas</a>
+            <a href="#">Beds</a>
+            <a href="#">Dining</a>
+            <a href="#">Chairs</a>
+            <a href="#">Hotel</a>
+        </div>
+    </div>
+
+    <!-- Product Grid -->
+    <div class="shop-wrapper">
+        <div class="shop-grid">
+
+            <a class="product-card" href="#">
+                <div class="product-card-image">
+                    <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=800&auto=format&fit=crop" alt="Double Bed">
+                </div>
+                <div class="product-card-info">
+                    <span class="name">Double Bed</span>
+                    <span class="price">K 4,500</span>
+                </div>
+            </a>
+
+            <a class="product-card" href="#">
+                <div class="product-card-image">
+                    <img src="https://images.unsplash.com/photo-1578653282816-a508bd2d0435?q=80&w=800&auto=format&fit=crop" alt="Velvet Armchair">
+                </div>
+                <div class="product-card-info">
+                    <span class="name">Velvet Armchair</span>
+                    <span class="price">K 3,600</span>
+                </div>
+            </a>
+
+            <a class="product-card" href="#">
+                <div class="product-card-image">
+                    <img src="https://plus.unsplash.com/premium_photo-1675744019321-f90d6d719da7?q=80&w=800&auto=format&fit=crop" alt="Dining Table">
+                </div>
+                <div class="product-card-info">
+                    <span class="name">Dining Table</span>
+                    <span class="price">K 1,700</span>
+                </div>
+            </a>
+
+            <a class="product-card" href="#">
+                <div class="product-card-image">
+                    <img src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?q=80&w=800&auto=format&fit=crop" alt="Lounge Chair">
+                </div>
+                <div class="product-card-info">
+                    <span class="name">Lounge Chair</span>
+                    <span class="price">K 2,300</span>
+                </div>
+            </a>
+
+            <a class="product-card" href="#">
+                <div class="product-card-image">
+                    <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=800&auto=format&fit=crop" alt="3-Seater Sofa">
+                </div>
+                <div class="product-card-info">
+                    <span class="name">3-Seater Sofa</span>
+                    <span class="price">K 6,200</span>
+                </div>
+            </a>
+
+            <a class="product-card" href="#">
+                <div class="product-card-image">
+                    <img src="https://images.unsplash.com/photo-1611967164521-abae8fba4668?q=80&w=800&auto=format&fit=crop" alt="Side Table">
+                </div>
+                <div class="product-card-info">
+                    <span class="name">Side Table</span>
+                    <span class="price">K 890</span>
+                </div>
+            </a>
+
+        </div>
+    </div>
+
+    <!-- Our Clients -->
+    <section class="our-clients-section">
+        <h2 class="clients-heading">Our Clients</h2>
+        <div class="clients-track">
+            <img src="https://winteriorz.com/wp-content/uploads/2024/08/i0_4qnu3pwt8yfc.png" alt="NAVA">
+            <img src="https://winteriorz.com/wp-content/uploads/2024/08/download__3_-removebg-preview-3.png" alt="Protea">
+            <img src="https://winteriorz.com/wp-content/uploads/2024/08/download__3_-removebg-preview-2-1.png" alt="B">
+            <img src="https://winteriorz.com/wp-content/uploads/2024/08/bet_cure-removebg-preview-1.png" alt="Beit Cure">
+            <img src="https://winteriorz.com/wp-content/uploads/2024/08/1631307900844-removebg-preview-1.png" alt="Good Nature Agro">
+            <img src="https://winteriorz.com/wp-content/uploads/2024/08/Ciela_Logotype_with_Descriptor_RGB_HR-01-1024x502-1.png" alt="Ciela Resort & Spa">
+            <img src="https://winteriorz.com/wp-content/uploads/2024/08/Ecobank_Logo_EN.png" alt="Ecobank">
+            <img src="https://winteriorz.com/wp-content/uploads/2024/08/anglo-american-plc-mining-quellaveco-mine-company-america.jpg" alt="Anglo American">
+            <img src="https://winteriorz.com/wp-content/uploads/2024/08/giraffecreativeslogoDARK-2.png" alt="Giraffe Creatives">
+            <img src="https://winteriorz.com/wp-content/uploads/2024/08/dlsl-logo-black-1.png" alt="David Livingstone">
+            <img src="https://winteriorz.com/wp-content/uploads/2024/08/download-8-1.png" alt="Corpus">
+            <img src="https://winteriorz.com/wp-content/uploads/2024/08/Chengelo-Colour-Logo-TransparentBKG-e1724677894428.png" alt="Chengelo">
+        </div>
+    </section>
+
+</body>
+</html>

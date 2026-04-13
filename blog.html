@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <title>Blog — Winteriors</title>
+
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --text: #292929;
+            --bg: #FFFFFF;
+            --bg-subtle: #F5F5F5;
+            --border: #EAEAEA;
+            --accent: #D1BC92;
+        }
+
+        @font-face {
+            font-family: 'Winteriors';
+            src: url('font/Winteriors.woff2') format('woff2'),
+                 url('font/Winteriors.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+        }
+
+        /* ── Header ── */
+        .header-wrapper {
+            border-bottom: 1px solid var(--border);
+        }
+
+        header {
+            max-width: 1140px;
+            margin: 0 auto;
+            height: 64px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 6px 8px;
+        }
+
+        header .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            color: var(--text);
+        }
+
+        header .logo img { height: 36px; }
+
+        h1 {
+            font-family: 'Winteriors', 'Times New Roman', serif;
+            text-transform: uppercase;
+            letter-spacing: 6px;
+            font-size: 1rem;
+        }
+
+        header .quicklinks {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        header a {
+            text-decoration: none;
+            color: inherit;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        header .quicklinks a.active {
+            border-bottom: 2px solid var(--accent);
+            font-weight: 600;
+            padding-bottom: 2px;
+        }
+
+        /* ── Page Banner ── */
+        .page-banner-wrapper {
+            background: var(--bg-subtle);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .page-banner {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 48px 8px 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            text-align: center;
+        }
+
+        .page-banner h2 {
+            font-size: 38px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-weight: 700;
+        }
+
+        .breadcrumb {
+            font-size: 12px;
+            color: #7A7A7A;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: flex;
+            gap: 6px;
+            align-items: center;
+        }
+
+        .breadcrumb a { color: #7A7A7A; text-decoration: none; }
+        .breadcrumb a:hover { color: var(--accent); }
+        .breadcrumb .sep { color: var(--border); }
+
+        /* ── Filter Bar ── */
+        .filter-bar-wrapper {
+            background: var(--bg);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .filter-bar {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 8px;
+            height: 52px;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            overflow-x: auto;
+        }
+
+        .filter-bar a {
+            text-decoration: none;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            color: #7A7A7A;
+            padding-bottom: 3px;
+            white-space: nowrap;
+            transition: color 0.2s;
+        }
+
+        .filter-bar a:hover { color: var(--text); }
+
+        .filter-bar a.active {
+            color: var(--text);
+            font-weight: 600;
+            border-bottom: 2px solid var(--accent);
+        }
+
+        /* ── Blog Wrapper ── */
+        .blog-wrapper {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 60px 8px 90px;
+        }
+
+        /* ── Featured Article ── */
+        .featured-article {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+            margin-bottom: 70px;
+            text-decoration: none;
+            color: var(--text);
+        }
+
+        .featured-image {
+            background: var(--bg-subtle);
+            aspect-ratio: 4 / 3;
+            overflow: hidden;
+        }
+
+        .featured-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .featured-article:hover .featured-image img {
+            transform: scale(1.04);
+        }
+
+        .featured-text {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .article-tag {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .featured-text h3 {
+            font-size: 28px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            line-height: 1.25;
+        }
+
+        .featured-text .excerpt {
+            font-size: 15px;
+            color: #5A5A5A;
+            line-height: 1.75;
+        }
+
+        .article-meta {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #9A9A9A;
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .article-meta .dot {
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            background: #9A9A9A;
+        }
+
+        .read-more {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 700;
+            color: var(--text);
+            margin-top: 0.5rem;
+            border-bottom: 1px solid var(--text);
+            padding-bottom: 2px;
+            width: fit-content;
+            transition: color 0.2s, border-color 0.2s;
+        }
+
+        .featured-article:hover .read-more {
+            color: var(--accent);
+            border-color: var(--accent);
+        }
+
+        /* ── Divider ── */
+        .section-divider {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 40px;
+        }
+
+        .section-divider::before,
+        .section-divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--border);
+        }
+
+        .section-divider span {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            color: #9A9A9A;
+            white-space: nowrap;
+        }
+
+        /* ── Articles Grid ── */
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .article-card {
+            display: flex;
+            flex-direction: column;
+            gap: 0.85rem;
+            text-decoration: none;
+            color: var(--text);
+        }
+
+        .article-card-image {
+            background: var(--bg-subtle);
+            aspect-ratio: 3 / 2;
+            overflow: hidden;
+        }
+
+        .article-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .article-card:hover .article-card-image img {
+            transform: scale(1.04);
+        }
+
+        .article-card h3 {
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 1.4;
+        }
+
+        .article-card .excerpt {
+            font-size: 13px;
+            color: #5A5A5A;
+            line-height: 1.65;
+        }
+
+        .article-card .article-meta {
+            margin-top: auto;
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 860px) {
+            .featured-article {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .featured-text h3 { font-size: 22px; }
+
+            .articles-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 520px) {
+            .articles-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="header-wrapper">
+        <header>
+            <a class="logo" href="index.html">
+                <img src="logo-white.png" alt="Winteriors logo" />
+                <h1>Winteriors</h1>
+            </a>
+            <nav class="quicklinks">
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="#">About</a>
+                <a href="blog.html" class="active">Blog</a>
+                <a href="#">Contact</a>
+            </nav>
+        </header>
+    </div>
+
+    <!-- Page Banner -->
+    <div class="page-banner-wrapper">
+        <div class="page-banner">
+            <h2>Blog</h2>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span class="sep">/</span>
+                <span>Blog</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Filter Bar -->
+    <div class="filter-bar-wrapper">
+        <div class="filter-bar">
+            <a href="#" class="active">All</a>
+            <a href="#">Interior Tips</a>
+            <a href="#">New Arrivals</a>
+            <a href="#">Behind the Scenes</a>
+            <a href="#">Client Stories</a>
+        </div>
+    </div>
+
+    <!-- Blog Content -->
+    <div class="blog-wrapper">
+
+        <!-- Featured Article -->
+        <a class="featured-article" href="#">
+            <div class="featured-image">
+                <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=1200&auto=format&fit=crop" alt="How to style your living room">
+            </div>
+            <div class="featured-text">
+                <span class="article-tag">Interior Tips</span>
+                <h3>5 Ways to Make Your Living Room Feel Bigger</h3>
+                <p class="excerpt">A well-arranged living room doesn't need to be large to feel spacious. From furniture placement to the right choice of upholstery, small decisions make a big difference in how a room breathes.</p>
+                <div class="article-meta">
+                    <span>8 Apr 2025</span>
+                    <span class="dot"></span>
+                    <span>5 min read</span>
+                </div>
+                <span class="read-more">Read Article →</span>
+            </div>
+        </a>
+
+        <!-- Grid Divider -->
+        <div class="section-divider">
+            <span>Latest Posts</span>
+        </div>
+
+        <!-- Articles Grid -->
+        <div class="articles-grid">
+
+            <a class="article-card" href="#">
+                <div class="article-card-image">
+                    <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=800&auto=format&fit=crop" alt="Choosing a sofa">
+                </div>
+                <span class="article-tag">Interior Tips</span>
+                <h3>How to Choose the Right Sofa for Your Space</h3>
+                <p class="excerpt">Size, fabric, and configuration — the three decisions that matter most when buying a sofa.</p>
+                <div class="article-meta">
+                    <span>1 Apr 2025</span>
+                    <span class="dot"></span>
+                    <span>4 min read</span>
+                </div>
+            </a>
+
+            <a class="article-card" href="#">
+                <div class="article-card-image">
+                    <img src="https://images.unsplash.com/photo-1631679706909-1844bbd07221?q=80&w=800&auto=format&fit=crop" alt="Hotel lobby">
+                </div>
+                <span class="article-tag">Client Stories</span>
+                <h3>How We Furnished the Ciela Resort Lobby</h3>
+                <p class="excerpt">A behind-the-scenes look at one of our largest commercial projects to date — 80 pieces, 3 weeks, zero compromises.</p>
+                <div class="article-meta">
+                    <span>22 Mar 2025</span>
+                    <span class="dot"></span>
+                    <span>6 min read</span>
+                </div>
+            </a>
+
+            <a class="article-card" href="#">
+                <div class="article-card-image">
+                    <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=800&auto=format&fit=crop" alt="New bed collection">
+                </div>
+                <span class="article-tag">New Arrivals</span>
+                <h3>Introducing Our 2025 Bedroom Collection</h3>
+                <p class="excerpt">Solid frames, deep mattresses, and refined finishes — our new bedroom range is built for Zambia's climate and your comfort.</p>
+                <div class="article-meta">
+                    <span>14 Mar 2025</span>
+                    <span class="dot"></span>
+                    <span>3 min read</span>
+                </div>
+            </a>
+
+            <a class="article-card" href="#">
+                <div class="article-card-image">
+                    <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=800&auto=format&fit=crop" alt="Dining room setup">
+                </div>
+                <span class="article-tag">Interior Tips</span>
+                <h3>Dining Room Layouts That Actually Work</h3>
+                <p class="excerpt">Whether you're entertaining guests or feeding a family, the right table size and chair arrangement changes everything.</p>
+                <div class="article-meta">
+                    <span>5 Mar 2025</span>
+                    <span class="dot"></span>
+                    <span>4 min read</span>
+                </div>
+            </a>
+
+            <a class="article-card" href="#">
+                <div class="article-card-image">
+                    <img src="https://plus.unsplash.com/premium_photo-1682147355592-dc8677611a7b?q=80&w=800&auto=format&fit=crop" alt="Warehouse behind the scenes">
+                </div>
+                <span class="article-tag">Behind the Scenes</span>
+                <h3>A Day at the Winteriors Showroom</h3>
+                <p class="excerpt">From morning setup to client walkthroughs — an honest look at how we operate and what sets our showroom apart.</p>
+                <div class="article-meta">
+                    <span>21 Feb 2025</span>
+                    <span class="dot"></span>
+                    <span>3 min read</span>
+                </div>
+            </a>
+
+            <a class="article-card" href="#">
+                <div class="article-card-image">
+                    <img src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?q=80&w=800&auto=format&fit=crop" alt="Accent chair">
+                </div>
+                <span class="article-tag">Interior Tips</span>
+                <h3>The Case for the Accent Chair</h3>
+                <p class="excerpt">One well-chosen chair can anchor a room, add colour, and do the work of a full redesign — for a fraction of the cost.</p>
+                <div class="article-meta">
+                    <span>10 Feb 2025</span>
+                    <span class="dot"></span>
+                    <span>3 min read</span>
+                </div>
+            </a>
+
+        </div>
+    </div>
+
+</body>
+</html>

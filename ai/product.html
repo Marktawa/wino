@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <title>3-Seater Sofa — Winteriors</title>
+
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --text: #292929;
+            --bg: #FFFFFF;
+            --bg-subtle: #F5F5F5;
+            --border: #EAEAEA;
+            --accent: #D1BC92;
+        }
+
+        .inverted {
+            --text: #FFFFFF;
+            --bg: #292929;
+        }
+
+        @font-face {
+            font-family: 'Winteriors';
+            src: url('font/Winteriors.woff2') format('woff2'),
+                 url('font/Winteriors.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+        }
+
+        /* ── Top Bar ── */
+        .topbar-wrapper { background: var(--bg); }
+        .topbar {
+            max-width: 1140px;
+            margin: 0 auto;
+            height: 36px;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 8px;
+        }
+        .topbar .email {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            font-size: 14px;
+        }
+        .topbar .socials {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .topbar .socials a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: #fff;
+            color: #292929;
+            text-decoration: none;
+            font-size: 12px;
+            transition: background 0.2s, transform 0.2s;
+        }
+        .topbar .socials a:hover {
+            background: var(--accent);
+            transform: scale(0.9);
+        }
+
+        /* ── Header ── */
+        .header-wrapper {
+            border-bottom: 1px solid var(--border);
+        }
+        header {
+            max-width: 1140px;
+            margin: 0 auto;
+            height: 64px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 6px 8px;
+        }
+        header .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            color: var(--text);
+        }
+        header .logo img { height: 36px; }
+        h1 {
+            font-family: 'Winteriors', 'Times New Roman', serif;
+            text-transform: uppercase;
+            letter-spacing: 6px;
+            font-size: 1rem;
+        }
+        header .quicklinks {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+        header a {
+            text-decoration: none;
+            color: inherit;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        header .quicklinks a.active {
+            border-bottom: 2px solid var(--accent);
+            font-weight: 600;
+            padding-bottom: 2px;
+        }
+
+        /* ── Breadcrumb ── */
+        .breadcrumb-wrapper {
+            background: var(--bg-subtle);
+            border-bottom: 1px solid var(--border);
+        }
+        .breadcrumb {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 12px 8px;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #7A7A7A;
+            display: flex;
+            gap: 6px;
+            align-items: center;
+        }
+        .breadcrumb a {
+            color: #7A7A7A;
+            text-decoration: none;
+        }
+        .breadcrumb a:hover { color: var(--accent); }
+        .breadcrumb .sep { color: var(--border); }
+
+        /* ── Product Layout ── */
+        .product-wrapper {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 50px 8px 80px 8px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        /* ── Gallery ── */
+        .gallery {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .gallery-main {
+            background: var(--bg-subtle);
+            aspect-ratio: 4 / 3;
+            overflow: hidden;
+            cursor: zoom-in;
+        }
+
+        .gallery-main img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-main:hover img {
+            transform: scale(1.04);
+        }
+
+        .gallery-thumbs {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        .gallery-thumbs .thumb {
+            background: var(--bg-subtle);
+            aspect-ratio: 1 / 1;
+            overflow: hidden;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: border-color 0.2s;
+        }
+
+        .gallery-thumbs .thumb.active {
+            border-color: var(--accent);
+        }
+
+        .gallery-thumbs .thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-thumbs .thumb:hover img {
+            transform: scale(1.06);
+        }
+
+        /* ── Product Info ── */
+        .product-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .product-tag {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .product-name {
+            font-size: 32px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            line-height: 1.2;
+        }
+
+        .product-price {
+            font-size: 24px;
+            font-weight: 400;
+            color: var(--text);
+            letter-spacing: 1px;
+        }
+
+        .product-description {
+            font-size: 15px;
+            line-height: 1.75;
+            color: #5A5A5A;
+            border-top: 1px solid var(--border);
+            padding-top: 1.5rem;
+        }
+
+        /* ── Colour Swatches ── */
+        .option-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .swatches {
+            display: flex;
+            gap: 10px;
+        }
+
+        .swatch {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: border-color 0.2s, transform 0.2s;
+            outline-offset: 3px;
+        }
+
+        .swatch:hover { transform: scale(1.1); }
+
+        .swatch.active {
+            border-color: var(--text);
+        }
+
+        /* ── Dimensions ── */
+        .dimensions-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+        }
+
+        .dim-cell {
+            background: var(--bg);
+            padding: 14px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .dim-cell .dim-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            color: #7A7A7A;
+        }
+
+        .dim-cell .dim-value {
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        /* ── CTAs ── */
+        .cta-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .btn-whatsapp {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: #292929;
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: 13px;
+            font-weight: 700;
+            padding: 18px 32px;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .btn-whatsapp:hover {
+            background: var(--accent);
+            color: var(--text);
+        }
+
+        .btn-trade {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: transparent;
+            color: var(--text);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 14px 32px;
+            border: 1px solid var(--border);
+            transition: border-color 0.2s, background 0.2s;
+        }
+
+        .btn-trade:hover {
+            border-color: var(--text);
+            background: var(--bg-subtle);
+        }
+
+        /* ── Meta Details ── */
+        .meta-details {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            border-top: 1px solid var(--border);
+            padding-top: 1.5rem;
+        }
+
+        .meta-row {
+            display: flex;
+            gap: 8px;
+            font-size: 13px;
+        }
+
+        .meta-row .meta-key {
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #7A7A7A;
+            min-width: 120px;
+        }
+
+        .meta-row .meta-value {
+            color: var(--text);
+        }
+
+        /* ── Trust Bar ── */
+        .trust-bar-wrapper {
+            background: var(--bg-subtle);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .trust-bar {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 28px 8px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+        }
+
+        .trust-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            text-align: center;
+        }
+
+        .trust-item i {
+            font-size: 20px;
+            color: var(--accent);
+        }
+
+        .trust-item .trust-title {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            font-weight: 700;
+        }
+
+        .trust-item .trust-desc {
+            font-size: 12px;
+            color: #7A7A7A;
+            line-height: 1.5;
+        }
+
+        /* ── Clients Used By ── */
+        .used-by-wrapper {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 50px 8px 0 8px;
+        }
+
+        .used-by-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #7A7A7A;
+            margin-bottom: 20px;
+        }
+
+        .used-by-logos {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .used-by-logos img {
+            height: 28px;
+            width: auto;
+            object-fit: contain;
+            opacity: 0.5;
+            filter: grayscale(1);
+            transition: opacity 0.2s, filter 0.2s;
+        }
+
+        .used-by-logos img:hover {
+            opacity: 1;
+            filter: grayscale(0);
+        }
+
+        /* ── Related Products ── */
+        .related-wrapper {
+            background: var(--bg);
+            padding: 70px 0 80px 0;
+        }
+
+        .section-heading-wrapper {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 8px;
+        }
+
+        .section-heading {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 40px;
+        }
+
+        .section-heading::before,
+        .section-heading::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--border);
+        }
+
+        .section-heading h2 {
+            font-size: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        .related-grid {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 8px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+
+        .product-card {
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            color: var(--text);
+            gap: 0.75rem;
+        }
+
+        .product-card-image {
+            background: var(--bg-subtle);
+            aspect-ratio: 3 / 4;
+            overflow: hidden;
+        }
+
+        .product-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .product-card:hover .product-card-image img {
+            transform: scale(1.04);
+        }
+
+        .product-card-info {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .product-card-info .name {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        .product-card-info .price {
+            font-size: 13px;
+            color: #7A7A7A;
+        }
+
+        /* ── Clients Strip ── */
+        .clients-heading {
+            text-align: center;
+            font-size: 28px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+        }
+
+        .our-clients-section {
+            padding: 50px 0 100px 0;
+            overflow: hidden;
+            max-width: 1140px;
+            margin: 0 auto;
+        }
+
+        .clients-track {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            width: max-content;
+            animation: step-scroll 50s ease-in-out infinite;
+        }
+
+        .clients-track img {
+            height: auto;
+            width: 150px;
+            object-fit: contain;
+            flex-shrink: 0;
+        }
+
+        @keyframes step-scroll {
+            0%, 3%   { transform: translateX(0); }
+            6%, 9%   { transform: translateX(-210px); }
+            12%, 15% { transform: translateX(-420px); }
+            18%, 21% { transform: translateX(-630px); }
+            24%, 27% { transform: translateX(-840px); }
+            30%, 33% { transform: translateX(-1050px); }
+            36%, 39% { transform: translateX(-1260px); }
+            42%, 45% { transform: translateX(-1470px); }
+            48%, 51% { transform: translateX(-1680px); }
+            54%, 57% { transform: translateX(-1890px); }
+            60%, 63% { transform: translateX(-2100px); }
+            66%, 69% { transform: translateX(-2280px); }
+            100%     { transform: translateX(0); }
+        }
+
+        .clients-track:hover { animation-play-state: paused; }
+
+        /* ── Responsive ── */
+        @media (max-width: 900px) {
+            .product-wrapper {
+                grid-template-columns: 1fr;
+                gap: 36px;
+            }
+            .trust-bar {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .related-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 500px) {
+            .gallery-thumbs {
+                grid-template-columns: repeat(4, 1fr);
+            }
+            .trust-bar {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="topbar-wrapper inverted">
+        <div class="topbar">
+            <div class="email">
+                <i class="fa-solid fa-envelope"></i>
+                <div>info@winteriorz.com</div>
+            </div>
+            <div class="socials">
+                <a href="https://facebook.com/winteriorszambia" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://wa.me/c/260776987155" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://instagram.com/winteriorszambia" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <div class="header-wrapper">
+        <header>
+            <a class="logo" href="index.html">
+                <img src="logo-white.png" alt="Winteriors logo" />
+                <h1>Winteriors</h1>
+            </a>
+            <nav class="quicklinks">
+                <a href="index.html">Home</a>
+                <a href="shop.html" class="active">Shop</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </nav>
+        </header>
+    </div>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb-wrapper">
+        <div class="breadcrumb">
+            <a href="index.html">Home</a>
+            <span class="sep">/</span>
+            <a href="shop.html">Shop</a>
+            <span class="sep">/</span>
+            <span>3-Seater Sofa</span>
+        </div>
+    </div>
+
+    <!-- Product Section -->
+    <div class="product-wrapper">
+
+        <!-- Gallery -->
+        <div class="gallery">
+            <div class="gallery-main" id="mainImage">
+                <img
+                    id="mainImg"
+                    src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=1200&auto=format&fit=crop"
+                    alt="3-Seater Sofa — Main View"
+                />
+            </div>
+            <div class="gallery-thumbs">
+                <div class="thumb active" onclick="switchImage(this, 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=800&auto=format&fit=crop')">
+                    <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=400&auto=format&fit=crop" alt="View 1">
+                </div>
+                <div class="thumb" onclick="switchImage(this, 'https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?q=80&w=800&auto=format&fit=crop')">
+                    <img src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?q=80&w=400&auto=format&fit=crop" alt="View 2">
+                </div>
+                <div class="thumb" onclick="switchImage(this, 'https://images.unsplash.com/photo-1540574163026-643ea20ade25?q=80&w=800&auto=format&fit=crop')">
+                    <img src="https://images.unsplash.com/photo-1540574163026-643ea20ade25?q=80&w=400&auto=format&fit=crop" alt="View 3">
+                </div>
+                <div class="thumb" onclick="switchImage(this, 'https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?q=80&w=800&auto=format&fit=crop')">
+                    <img src="https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?q=80&w=400&auto=format&fit=crop" alt="View 4">
+                </div>
+            </div>
+        </div>
+
+        <!-- Info -->
+        <div class="product-info">
+            <span class="product-tag">Living Room · New Arrival</span>
+            <h2 class="product-name">3-Seater Sofa</h2>
+            <span class="product-price">K 6,200</span>
+
+            <p class="product-description">
+                A statement piece for any living room or hotel lounge. The deep foam cushioning
+                and solid hardwood frame make this sofa as durable as it is comfortable —
+                built for Zambia's climate and crafted to last. Available in three upholstery
+                finishes to suit any interior palette.
+            </p>
+
+            <!-- Colour Swatches -->
+            <div>
+                <p class="option-label">Colour — <span id="colourName" style="font-weight:400; text-transform:none; letter-spacing:0">Charcoal Grey</span></p>
+                <div class="swatches">
+                    <div class="swatch active" style="background:#5A5A5A;" title="Charcoal Grey" onclick="selectSwatch(this, 'Charcoal Grey')"></div>
+                    <div class="swatch" style="background:#C2A882;" title="Warm Sand" onclick="selectSwatch(this, 'Warm Sand')"></div>
+                    <div class="swatch" style="background:#2C3E50;" title="Midnight Navy" onclick="selectSwatch(this, 'Midnight Navy')"></div>
+                </div>
+            </div>
+
+            <!-- Dimensions -->
+            <div>
+                <p class="option-label">Dimensions</p>
+                <div class="dimensions-grid">
+                    <div class="dim-cell">
+                        <span class="dim-label">Width</span>
+                        <span class="dim-value">220 cm</span>
+                    </div>
+                    <div class="dim-cell">
+                        <span class="dim-label">Depth</span>
+                        <span class="dim-value">90 cm</span>
+                    </div>
+                    <div class="dim-cell">
+                        <span class="dim-label">Height</span>
+                        <span class="dim-value">85 cm</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTAs -->
+            <div class="cta-group">
+                <a class="btn-whatsapp" href="https://wa.me/260776987155?text=Hi%2C%20I%27m%20interested%20in%20the%203-Seater%20Sofa%20(K%206%2C200)" target="_blank">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    Order via WhatsApp
+                </a>
+                <a class="btn-trade" href="https://wa.me/260776987155?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20a%20bulk%20order%20for%20the%203-Seater%20Sofa" target="_blank">
+                    <i class="fa-solid fa-building"></i>
+                    Bulk / Trade Enquiry
+                </a>
+            </div>
+
+            <!-- Meta -->
+            <div class="meta-details">
+                <div class="meta-row">
+                    <span class="meta-key">Material</span>
+                    <span class="meta-value">Hardwood frame, high-density foam, fabric upholstery</span>
+                </div>
+                <div class="meta-row">
+                    <span class="meta-key">Weight Limit</span>
+                    <span class="meta-value">300 kg</span>
+                </div>
+                <div class="meta-row">
+                    <span class="meta-key">Assembly</span>
+                    <span class="meta-value">Delivered fully assembled</span>
+                </div>
+                <div class="meta-row">
+                    <span class="meta-key">Lead Time</span>
+                    <span class="meta-value">5–7 business days (Lusaka)</span>
+                </div>
+                <div class="meta-row">
+                    <span class="meta-key">Delivery</span>
+                    <span class="meta-value">Lusaka & upcountry available</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Trust Bar -->
+    <div class="trust-bar-wrapper">
+        <div class="trust-bar">
+            <div class="trust-item">
+                <i class="fa-solid fa-truck"></i>
+                <span class="trust-title">Nationwide Delivery</span>
+                <span class="trust-desc">Lusaka and upcountry delivery available on request</span>
+            </div>
+            <div class="trust-item">
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+                <span class="trust-title">Fully Assembled</span>
+                <span class="trust-desc">Every piece arrives ready to use — no assembly needed</span>
+            </div>
+            <div class="trust-item">
+                <i class="fa-brands fa-whatsapp"></i>
+                <span class="trust-title">WhatsApp Support</span>
+                <span class="trust-desc">Chat with us directly for quotes and availability</span>
+            </div>
+            <div class="trust-item">
+                <i class="fa-solid fa-building-columns"></i>
+                <span class="trust-title">Trade & Hotel Orders</span>
+                <span class="trust-desc">Bulk pricing available for commercial clients</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Trusted By -->
+    <div class="used-by-wrapper">
+        <p class="used-by-label">Trusted by leading organisations across Zambia</p>
+        <div class="used-by-logos">
+            <img src="https://winteriorz.com/wp-content/uploads/2024/08/Ciela_Logotype_with_Descriptor_RGB_HR-01-1024x502-1.png" alt="Ciela Resort & Spa">
+            <img src="https://winteriorz.com/wp-content/uploads/2024/08/download__3_-removebg-preview-3.png" alt="Protea">
+            <img src="https://winteriorz.com/wp-content/uploads/2024/08/Ecobank_Logo_EN.png" alt="Ecobank">
+            <img src="https://winteriorz.com/wp-content/uploads/2024/08/download-6-1.png" alt="KOZO Hotels">
+            <img src="https://winteriorz.com/wp-content/uploads/2024/08/anglo-american-plc-mining-quellaveco-mine-company-america.jpg" alt="Anglo American">
+        </div>
+    </div>
+
+    <!-- Related Products -->
+    <div class="related-wrapper">
+        <div class="section-heading-wrapper">
+            <div class="section-heading">
+                <h2>You May Also Like</h2>
+            </div>
+        </div>
+        <div class="related-grid">
+            <a class="product-card" href="#">
+                <div class="product-card-image">
+                    <img src="https://images.unsplash.com/photo-1578653282816-a508bd2d0435?q=80&w=800&auto=format&fit=crop" alt="Velvet Armchair">
+                </div>
+                <div class="product-card-info">
+                    <span class="name">Velvet Armchair</span>
+                    <span class="price">K 3,600</span>
+                </div>
+            </a>
+            <a class="product-card" href="#">
+                <div class="product-card-image">
+                    <img src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?q=80&w=800&auto=format&fit=crop" alt="Lounge Chair">
+                </div>
+                <div class="product-card-info">
+                    <span class="name">Lounge Chair</span>
+                    <span class="price">K 2,300</span>
+                </div>
+            </a>
+            <a class="product-card" href="#">
+                <div class="product-card-image">
+                    <img src="https://plus.unsplash.com/premium_photo-1675744019321-f90d6d719da7?q=80&w=800&auto=format&fit=crop" alt="Dining Table">
+                </div>
+                <div class="product-card-info">
+                    <span class="name">Dining Table</span>
+                    <span class="price">K 1,700</span>
+                </div>
+            </a>
+            <a class="product-card" href="#">
+                <div class="product-card-image">
+                    <img src="https://images.unsplash.com/photo-1611967164521-abae8fba4668?q=80&w=800&auto=format&fit=crop" alt="Side Table">
+                </div>
+                <div class="product-card-info">
+                    <span class="name">Side Table</span>
+                    <span class="price">K 890</span>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- Clients Strip -->
+    <section class="our-clients-section">
+        <h2 class="clients-heading">Our Clients</h2>
+        <div class="clients-track">
+            <img src="https://winteriorz.com/wp-content/uploads/2024/08/i0_4qnu3pwt8yfc.png" alt="NAVA">
+            <img src="https://winteriorz.com/wp-content/uploads/2024/08/download__3_-removebg-preview-3.png" alt="Protea">
+            <img src="https://winteriorz.com/wp-content/uploads/2024/08/download__3_-removebg-preview-2-1.png" alt="B">
+            <img src="https://winteriorz.com/wp-content/uploads/2024/08/bet_cure-removebg-preview-1.png" alt="Beit Cure">
+            <img src="https://winteriorz.com/wp-content/uploads/2024/08/1631307900844-removebg-preview-1.png" alt="Good Nature Agro">
+            <img src="https://winteriorz.com/wp-content/uploads/2024/08/Ciela_Logotype_with_Descriptor_RGB_HR-01-1024x502-1.png" alt="Ciela Resort & Spa">
+            <img src="https://winteriorz.com/wp-content/uploads/2024/08/Ecobank_Logo_EN.png" alt="Ecobank">
+            <img src="https://winteriorz.com/wp-content/uploads/2024/08/anglo-american-plc-mining-quellaveco-mine-company-america.jpg" alt="Anglo American">
+            <img src="https://winteriorz.com/wp-content/uploads/2024/08/giraffecreativeslogoDARK-2.png" alt="Giraffe Creatives">
+            <img src="https://winteriorz.com/wp-content/uploads/2024/08/dlsl-logo-black-1.png" alt="David Livingstone">
+            <img src="https://winteriorz.com/wp-content/uploads/2024/08/download-8-1.png" alt="Corpus">
+            <img src="https://winteriorz.com/wp-content/uploads/2024/08/Chengelo-Colour-Logo-TransparentBKG-e1724677894428.png" alt="Chengelo">
+        </div>
+    </section>
+
+    <script>
+        function switchImage(thumbEl, src) {
+            document.getElementById('mainImg').src = src;
+            document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
+            thumbEl.classList.add('active');
+        }
+
+        function selectSwatch(swatchEl, name) {
+            document.querySelectorAll('.swatch').forEach(s => s.classList.remove('active'));
+            swatchEl.classList.add('active');
+            document.getElementById('colourName').textContent = name;
+        }
+    </script>
+
+</body>
+</html>

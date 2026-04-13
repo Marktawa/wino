@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <title>Meet the Alabaster Sofa — Winteriors Blog</title>
+
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --text: #292929;
+            --bg: #FFFFFF;
+            --bg-subtle: #F5F5F5;
+            --border: #EAEAEA;
+            --accent: #D1BC92;
+        }
+
+        @font-face {
+            font-family: 'Winteriors';
+            src: url('font/Winteriors.woff2') format('woff2'),
+                 url('font/Winteriors.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+        }
+
+        /* ── Header ── */
+        .header-wrapper { border-bottom: 1px solid var(--border); }
+
+        header {
+            max-width: 1140px;
+            margin: 0 auto;
+            height: 64px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 6px 8px;
+        }
+
+        header .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            color: var(--text);
+        }
+
+        header .logo img { height: 36px; }
+
+        h1 {
+            font-family: 'Winteriors', 'Times New Roman', serif;
+            text-transform: uppercase;
+            letter-spacing: 6px;
+            font-size: 1rem;
+        }
+
+        header .quicklinks {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        header a {
+            text-decoration: none;
+            color: inherit;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        header .quicklinks a.active {
+            border-bottom: 2px solid var(--accent);
+            font-weight: 600;
+            padding-bottom: 2px;
+        }
+
+        /* ── Breadcrumb ── */
+        .breadcrumb-wrapper {
+            background: var(--bg-subtle);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .breadcrumb {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 12px 8px;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #7A7A7A;
+            display: flex;
+            gap: 6px;
+            align-items: center;
+        }
+
+        .breadcrumb a { color: #7A7A7A; text-decoration: none; }
+        .breadcrumb a:hover { color: var(--accent); }
+        .breadcrumb .sep { color: var(--border); }
+
+        /* ── Hero ── */
+        .hero-image-wrapper {
+            max-width: 1140px;
+            margin: 48px auto 0;
+            padding: 0 8px;
+        }
+
+        .hero-image-wrapper img {
+            width: 100%;
+            aspect-ratio: 16 / 7;
+            object-fit: cover;
+            object-position: center 60%;
+            display: block;
+        }
+
+        /* ── Article Header ── */
+        .article-header {
+            max-width: 720px;
+            margin: 36px auto 0;
+            padding: 0 8px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .article-tag {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .article-header h2 {
+            font-size: 36px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            line-height: 1.2;
+        }
+
+        .article-meta {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #9A9A9A;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .article-meta .dot {
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            background: #9A9A9A;
+            flex-shrink: 0;
+        }
+
+        /* ── Rule ── */
+        .rule {
+            max-width: 720px;
+            margin: 36px auto;
+            padding: 0 8px;
+            height: 1px;
+            background: var(--border);
+        }
+
+        /* ── Body ── */
+        .article-body {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 8px 80px;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .article-body p {
+            font-size: 16px;
+            line-height: 1.85;
+            color: #3A3A3A;
+        }
+
+        /* Section headings inside article */
+        .article-body .section-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--accent);
+            font-weight: 700;
+            margin-bottom: -1rem;
+        }
+
+        .article-body h3 {
+            font-size: 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: -0.5rem;
+        }
+
+        /* Pull quote */
+        blockquote {
+            border-left: 3px solid var(--accent);
+            padding: 12px 0 12px 24px;
+            margin: 0;
+        }
+
+        blockquote p {
+            font-size: 18px !important;
+            font-style: italic;
+            color: #5A5A5A !important;
+            line-height: 1.7 !important;
+        }
+
+        /* ── Glance Box ── */
+        .glance-box {
+            background: var(--bg-subtle);
+            padding: 28px 32px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px 40px;
+        }
+
+        .glance-row {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 12px;
+        }
+
+        .glance-key {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #9A9A9A;
+        }
+
+        .glance-value {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        /* ── Pricing Table ── */
+        .pricing-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .pricing-table th {
+            text-align: left;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #9A9A9A;
+            border-bottom: 1px solid var(--border);
+            padding: 10px 0;
+        }
+
+        .pricing-table td {
+            font-size: 14px;
+            padding: 14px 0;
+            border-bottom: 1px solid var(--border);
+            vertical-align: top;
+        }
+
+        .pricing-table td:last-child {
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        /* ── Care Grid ── */
+        .care-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+        }
+
+        .care-cell {
+            background: var(--bg);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .care-cell i {
+            font-size: 16px;
+            color: var(--accent);
+            margin-bottom: 2px;
+        }
+
+        .care-cell .care-title {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            font-weight: 700;
+        }
+
+        .care-cell p {
+            font-size: 13px !important;
+            line-height: 1.65 !important;
+            color: #5A5A5A !important;
+        }
+
+        /* ── Scenario Cards ── */
+        .scenario-list {
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+        }
+
+        .scenario {
+            display: grid;
+            grid-template-columns: 3px 1fr;
+            gap: 20px;
+            align-items: start;
+        }
+
+        .scenario-bar {
+            background: var(--accent);
+            height: 100%;
+            min-height: 60px;
+        }
+
+        .scenario-content {}
+
+        .scenario-title {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .scenario-content p {
+            font-size: 14px !important;
+            line-height: 1.7 !important;
+            color: #5A5A5A !important;
+        }
+
+        /* ── Decor Suggestions ── */
+        .decor-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .decor-card {
+            background: var(--bg-subtle);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .decor-card .decor-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .decor-card .decor-title {
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .decor-card p {
+            font-size: 13px !important;
+            color: #5A5A5A !important;
+            line-height: 1.65 !important;
+        }
+
+        /* ── CTA Banner ── */
+        .cta-banner {
+            background: #292929;
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            text-align: center;
+        }
+
+        .cta-banner p {
+            font-size: 14px !important;
+            color: #AAAAAA !important;
+            letter-spacing: 0.5px;
+        }
+
+        .cta-banner .cta-title {
+            font-size: 18px !important;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #FFFFFF !important;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--accent);
+            color: #292929;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 14px 28px;
+            transition: opacity 0.2s;
+        }
+
+        .btn-primary:hover { opacity: 0.85; }
+
+        .btn-outline {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: transparent;
+            color: #FFFFFF;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 14px 28px;
+            border: 1px solid #555;
+            transition: border-color 0.2s;
+        }
+
+        .btn-outline:hover { border-color: #FFFFFF; }
+
+        /* ── Section Divider ── */
+        .section-divider {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin: 60px 0 40px;
+        }
+
+        .section-divider::before,
+        .section-divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--border);
+        }
+
+        .section-divider span {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            color: #9A9A9A;
+            white-space: nowrap;
+        }
+
+        /* ── Related Products ── */
+        .related-wrapper {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 8px 80px;
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .product-card {
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            color: var(--text);
+            gap: 0.75rem;
+        }
+
+        .product-card-image {
+            background: var(--bg-subtle);
+            aspect-ratio: 3 / 4;
+            overflow: hidden;
+        }
+
+        .product-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .product-card:hover .product-card-image img { transform: scale(1.04); }
+
+        .product-card-info {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .product-card-info .name {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        .product-card-info .price {
+            font-size: 13px;
+            color: #7A7A7A;
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 720px) {
+            .article-header h2 { font-size: 26px; }
+            .glance-box { grid-template-columns: 1fr; }
+            .care-grid { grid-template-columns: 1fr; }
+            .decor-grid { grid-template-columns: 1fr; }
+            .related-grid { grid-template-columns: repeat(2, 1fr); }
+            .hero-image-wrapper img { aspect-ratio: 4 / 3; }
+        }
+
+        @media (max-width: 480px) {
+            .related-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="header-wrapper">
+        <header>
+            <a class="logo" href="index.html">
+                <img src="logo-white.png" alt="Winteriors logo" />
+                <h1>Winteriors</h1>
+            </a>
+            <nav class="quicklinks">
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="#">About</a>
+                <a href="blog.html" class="active">Blog</a>
+                <a href="#">Contact</a>
+            </nav>
+        </header>
+    </div>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb-wrapper">
+        <div class="breadcrumb">
+            <a href="index.html">Home</a>
+            <span class="sep">/</span>
+            <a href="blog.html">Blog</a>
+            <span class="sep">/</span>
+            <span>Meet the Alabaster Sofa</span>
+        </div>
+    </div>
+
+    <!-- Hero Image -->
+    <div class="hero-image-wrapper">
+        <img src="sofa.jpeg" alt="The Alabaster 3-Seater Sofa by Winteriors" />
+    </div>
+
+    <!-- Article Header -->
+    <div class="article-header">
+        <span class="article-tag">New Arrivals · Living Room</span>
+        <h2>Meet the Alabaster Sofa</h2>
+        <div class="article-meta">
+            <span>10 Apr 2025</span>
+            <span class="dot"></span>
+            <span>8 min read</span>
+            <span class="dot"></span>
+            <span>By Winteriors</span>
+        </div>
+    </div>
+
+    <div class="rule"></div>
+
+    <!-- Article Body -->
+    <div class="article-body">
+
+        <!-- Introduction -->
+        <span class="section-label">Introduction</span>
+        <p>
+            Some furniture pieces quietly demand attention — not through loudness, but through
+            confidence. The Alabaster Sofa is exactly that. A low-profile, contemporary 3-seater
+            finished in a soft cream fabric, it carries the kind of effortless elegance that makes
+            a room feel considered and complete. We built it for people who want their living space
+            to feel like a refuge — unhurried, refined, and entirely their own.
+        </p>
+        <p>
+            This is not a sofa that shouts. It whispers — through the clean straight silhouette,
+            the slender black metal legs, the generous bench seat, and the two plush scatter cushions
+            that invite you to sink in and stay a while. Whether anchoring a minimalist apartment in
+            Lusaka's Kabulonga or gracing the lobby of a boutique hotel, the Alabaster sofa earns
+            its place without trying.
+        </p>
+
+        <blockquote>
+            <p>"We wanted something that could sit beside bold art, muted walls, or a window view —
+            and hold its own in all three."</p>
+        </blockquote>
+
+        <!-- Product at a Glance -->
+        <span class="section-label">Product at a Glance</span>
+        <h3>The Details</h3>
+        <p>
+            The Alabaster is a full 3-seater sofa with a deep bench-style seat and back cushions
+            upholstered in a durable cream fabric weave. The frame is solid hardwood, engineered
+            for the humidity and temperature range of the Zambian climate. Its slim black powder-coated
+            metal legs elevate it just enough to keep the silhouette light and modern. Two matching
+            scatter cushions are included as standard.
+        </p>
+
+        <div class="glance-box">
+            <div class="glance-row">
+                <span class="glance-key">Name</span>
+                <span class="glance-value">Alabaster 3-Seater Sofa</span>
+            </div>
+            <div class="glance-row">
+                <span class="glance-key">Width</span>
+                <span class="glance-value">220 cm</span>
+            </div>
+            <div class="glance-row">
+                <span class="glance-key">Depth</span>
+                <span class="glance-value">90 cm</span>
+            </div>
+            <div class="glance-row">
+                <span class="glance-key">Height</span>
+                <span class="glance-value">75 cm (seat: 42 cm)</span>
+            </div>
+            <div class="glance-row">
+                <span class="glance-key">Frame</span>
+                <span class="glance-value">Solid hardwood</span>
+            </div>
+            <div class="glance-row">
+                <span class="glance-key">Upholstery</span>
+                <span class="glance-value">Cream fabric weave</span>
+            </div>
+            <div class="glance-row">
+                <span class="glance-key">Legs</span>
+                <span class="glance-value">Black powder-coated metal</span>
+            </div>
+            <div class="glance-row">
+                <span class="glance-key">Weight Capacity</span>
+                <span class="glance-value">300 kg</span>
+            </div>
+            <div class="glance-row">
+                <span class="glance-key">Assembly</span>
+                <span class="glance-value">Fully assembled on delivery</span>
+            </div>
+            <div class="glance-row">
+                <span class="glance-key">Lead Time</span>
+                <span class="glance-value">5–7 business days (Lusaka)</span>
+            </div>
+        </div>
+
+        <!-- Pricing -->
+        <span class="section-label">Pricing & Variations</span>
+        <h3>What It Costs</h3>
+        <p>
+            The Alabaster is available in three upholstery finishes — all carrying the same frame
+            and leg specification. Bulk pricing is available for commercial orders of 5 units or more.
+        </p>
+
+        <table class="pricing-table">
+            <thead>
+                <tr>
+                    <th>Variant</th>
+                    <th>Finish</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Standard</td>
+                    <td>Cream fabric weave</td>
+                    <td>K 6,200</td>
+                </tr>
+                <tr>
+                    <td>Warm Sand</td>
+                    <td>Sand fabric weave</td>
+                    <td>K 6,200</td>
+                </tr>
+                <tr>
+                    <td>Charcoal</td>
+                    <td>Charcoal grey fabric weave</td>
+                    <td>K 6,500</td>
+                </tr>
+                <tr>
+                    <td>Bulk (5+ units)</td>
+                    <td>Any finish</td>
+                    <td>Contact us for quote</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Care & Maintenance -->
+        <span class="section-label">Care & Maintenance</span>
+        <h3>Keeping It Beautiful</h3>
+        <p>
+            Light-coloured fabric upholstery rewards a little regular attention. The good news is
+            that none of it is complicated — a consistent routine is all it takes to keep the
+            Alabaster looking fresh for years.
+        </p>
+
+        <div class="care-grid">
+            <div class="care-cell">
+                <i class="fa-solid fa-wind"></i>
+                <span class="care-title">Dusting</span>
+                <p>Use a soft-bristle upholstery brush or the brush attachment of a vacuum cleaner
+                once a week to lift dust, pet hair, and fine particles from the fabric surface and
+                seat crevices. Always brush in the direction of the weave.</p>
+            </div>
+            <div class="care-cell">
+                <i class="fa-solid fa-droplet"></i>
+                <span class="care-title">Wiping & Spot Cleaning</span>
+                <p>For fresh spills, blot immediately with a clean dry cloth — never rub. For light
+                stains, use a barely damp cloth with a small amount of mild fabric detergent. Work
+                from the outside of the stain inward and allow to air dry fully.</p>
+            </div>
+            <div class="care-cell">
+                <i class="fa-solid fa-soap"></i>
+                <span class="care-title">Deep Cleaning</span>
+                <p>Every 3–4 months, use an upholstery foam cleaner or a fabric steamer for a deeper
+                clean. Allow the sofa to dry completely in a well-ventilated room before use. Avoid
+                soaking the fabric or using harsh chemical cleaners.</p>
+            </div>
+            <div class="care-cell">
+                <i class="fa-solid fa-spray-can"></i>
+                <span class="care-title">Deodorising</span>
+                <p>Lightly sprinkle baking soda over the fabric, leave for 20–30 minutes, then vacuum
+                thoroughly. This neutralises odours naturally without chemical residue. Repeat monthly
+                or as needed, especially in humid conditions.</p>
+            </div>
+            <div class="care-cell">
+                <i class="fa-solid fa-star"></i>
+                <span class="care-title">Scenting</span>
+                <p>Avoid spraying perfume or air freshener directly on the fabric. Instead, place a
+                linen sachet with dried lavender or cedar inside a cushion cover, or use a fabric-safe
+                linen spray misted lightly from at least 30 cm away.</p>
+            </div>
+            <div class="care-cell">
+                <i class="fa-solid fa-wrench"></i>
+                <span class="care-title">Leg & Frame Care</span>
+                <p>Wipe the black powder-coated metal legs with a barely damp cloth to remove dust.
+                Dry immediately to prevent water marks. Check leg screws every 6 months and tighten
+                if needed to keep the frame firm and stable.</p>
+            </div>
+        </div>
+
+        <!-- Where It Works Best -->
+        <span class="section-label">Placement</span>
+        <h3>Where It Works Best</h3>
+        <p>
+            The Alabaster's neutral cream tone and restrained profile make it one of the most
+            versatile sofas we carry. Below are the settings where it performs best — and why.
+        </p>
+
+        <div class="scenario-list">
+            <div class="scenario">
+                <div class="scenario-bar"></div>
+                <div class="scenario-content">
+                    <p class="scenario-title">The Modern Living Room</p>
+                    <p>Place the Alabaster facing a low media console or a gallery wall of bold art —
+                    much like the photograph above. Add a textured jute rug underneath to ground it,
+                    a small white or wooden side table to the right, and a floor lamp to the left.
+                    The cream tone reflects natural light beautifully, making the space feel larger
+                    and airier than it is.</p>
+                </div>
+            </div>
+            <div class="scenario">
+                <div class="scenario-bar"></div>
+                <div class="scenario-content">
+                    <p class="scenario-title">Hotel & Guest Lounge</p>
+                    <p>In a hotel lobby or guest lounge, the Alabaster reads as premium without
+                    being cold. Pair two units facing each other across a low marble or glass coffee
+                    table, flanked by armchairs in a contrasting fabric. The low seat height keeps
+                    sightlines open across the room — ideal for spaces that need to feel both
+                    welcoming and uncluttered.</p>
+                </div>
+            </div>
+            <div class="scenario">
+                <div class="scenario-bar"></div>
+                <div class="scenario-content">
+                    <p class="scenario-title">Executive Office Reception</p>
+                    <p>Position the sofa against a feature wall — ideally a dark painted or panelled
+                    surface that contrasts with the cream — to create a reception seating area that
+                    makes visitors feel at ease from the moment they walk in. A single potted plant
+                    and a low side table complete the look without overcrowding the space.</p>
+                </div>
+            </div>
+            <div class="scenario">
+                <div class="scenario-bar"></div>
+                <div class="scenario-content">
+                    <p class="scenario-title">Open-Plan Apartment</p>
+                    <p>In an open-plan layout, use the Alabaster to define the living zone within a
+                    larger room. Position it with its back to the dining area, creating a natural
+                    boundary. A large area rug underneath reinforces the separation. The sofa's
+                    low profile ensures it doesn't visually chop the room in half.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Interior Decor Suggestions -->
+        <span class="section-label">Interior Decor</span>
+        <h3>Styling Suggestions</h3>
+        <p>
+            The Alabaster is a neutral anchor — it works with a wide range of palettes and styles.
+            Here are four popular setups that suit most Zambian homes and offices.
+        </p>
+
+        <div class="decor-grid">
+            <div class="decor-card">
+                <span class="decor-label">Palette</span>
+                <span class="decor-title">Warm Neutrals</span>
+                <p>Pair with terracotta cushions, a warm-toned wooden coffee table, and a sisal rug.
+                Wall colour: warm white or soft sand. This is the most popular combination for
+                residential living rooms — easy, cohesive, and timeless.</p>
+            </div>
+            <div class="decor-card">
+                <span class="decor-label">Palette</span>
+                <span class="decor-title">Monochrome Contrast</span>
+                <p>Keep the sofa cream, add black scatter cushions, a black metal coffee table, and
+                a charcoal grey rug. A single large black-framed artwork above completes the look.
+                Suits minimalist apartments and executive offices equally well.</p>
+            </div>
+            <div class="decor-card">
+                <span class="decor-label">Palette</span>
+                <span class="decor-title">Nature & Green</span>
+                <p>Introduce sage green or forest green through cushion covers, a trailing potted
+                plant, and linen curtains in a muted olive tone. The cream sofa becomes the calm
+                centre between organic textures — ideal for homes that lean into biophilic design.</p>
+            </div>
+            <div class="decor-card">
+                <span class="decor-label">Palette</span>
+                <span class="decor-title">Bold Art, Quiet Base</span>
+                <p>Let the sofa be the quiet base for a bold art-forward room. A large, colourful
+                abstract painting above — as seen in our product photo — does all the expressive work
+                while the cream sofa keeps the room grounded and liveable.</p>
+            </div>
+        </div>
+
+        <!-- Perfect Pairings -->
+        <span class="section-label">Perfect Pairings</span>
+        <h3>Products That Work Well With It</h3>
+        <p>
+            The Alabaster plays well with others. These three products from our current collection
+            complement it naturally — in proportion, tone, and function.
+        </p>
+
+    </div>
+
+    <!-- Related Products (full width grid) -->
+    <div class="related-wrapper">
+        <div class="related-grid">
+            <a class="product-card" href="#">
+                <div class="product-card-image">
+                    <img src="https://images.unsplash.com/photo-1578653282816-a508bd2d0435?q=80&w=800&auto=format&fit=crop" alt="Velvet Armchair">
+                </div>
+                <div class="product-card-info">
+                    <span class="name">Velvet Armchair</span>
+                    <span class="price">K 3,600</span>
+                </div>
+            </a>
+            <a class="product-card" href="#">
+                <div class="product-card-image">
+                    <img src="https://images.unsplash.com/photo-1611967164521-abae8fba4668?q=80&w=800&auto=format&fit=crop" alt="Side Table">
+                </div>
+                <div class="product-card-info">
+                    <span class="name">Side Table</span>
+                    <span class="price">K 890</span>
+                </div>
+            </a>
+            <a class="product-card" href="#">
+                <div class="product-card-image">
+                    <img src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?q=80&w=800&auto=format&fit=crop" alt="Lounge Chair">
+                </div>
+                <div class="product-card-info">
+                    <span class="name">Lounge Chair</span>
+                    <span class="price">K 2,300</span>
+                </div>
+            </a>
+        </div>
+
+        <!-- Section Divider -->
+        <div class="section-divider">
+            <span>Interested in this piece?</span>
+        </div>
+
+        <!-- CTA Banner -->
+        <div class="cta-banner">
+            <p class="cta-title">Ready to bring it home?</p>
+            <p>Order directly via WhatsApp or enquire about bulk and trade pricing for commercial projects.</p>
+            <div class="cta-buttons">
+                <a class="btn-primary" href="https://wa.me/260776987155?text=Hi%2C%20I%27m%20interested%20in%20the%20Alabaster%203-Seater%20Sofa" target="_blank">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    Order via WhatsApp
+                </a>
+                <a class="btn-outline" href="product.html">
+                    View Product Page →
+                </a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

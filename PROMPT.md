@@ -1,5 +1,9 @@
 ## PROMPT
 
+Describe in brief how you would arrange the shop page for the following website attached, `prompt.html`.  Make sure that when one visits the page they are met with a grid of products with price, image, and, name. For now it will be 6 products only
+
+## PROMPT
+
 What about what comes before that, like the base reset for the CSS, the variables, short summary on the approach to be taken
 
 ## CLAUDE
