@@ -1,92 +1,237 @@
-The following document describes in detail the problems with the Winteriors website.
+The following document describes in detail the issues with the Winteriors website.
 
-We will start with the Desktop View of the website. Page by Page then Section by Section.
+## Issue: The header is not visible.
+The apparent header or top bar of the website appears to be okay from initial view. However, it is clear from inspection that this is a top bar meant to complement a header. The header is absent from view. 
+<!-- Add Screenshot with Absent Header -->
 
-## Home Page
+### Expected Behaviour
+The header should be present. It is the section of the website which showcases the title of the website as well as the links to other parts of the website. Users expect to see this when they visit a website.
 
-## Header
+### Suggested Solution
+I have added a header which includes the company name, "Winteriors" and the links to the main sections of the website. These are the Shop section, About us section, and Contact us section. Plus a menu button which shows the links when viewing the website using a phone.
+<!-- Add Screenshot with Header present and links -->
 
-The apparent header or top bar of the website appears to be okay from initial view. However, it is clear from inspection that this is a top bar meant to complement a header. The header is absent from view.
+## Issue: Link to the Winteriors' Instagram page is absent.
+When one clicks the Instagram social icon in the top bar of the website nothing happens. For the Facebook social icon, the link does appear.
+<!-- Add Screenshot highlighting the Instagram icon in the top bar -->
 
-Hovering over the social icon for Instagram, I noticed that the link to the Winteriors Instagram page does not appear. When one clicks the Instagram social icon nothing happens. For the Facebook social icon, the link does appear.
+### Expected Behaviour
+Clicking on the Instagram social icon in the top bar should lead users to Winteriors' Instagram page.
 
-The link to the email is misspelt. It is written `hello@winterioz.com` whereas the domain name is supposed to be `winteriorz.com`. There is a missing `r` between `o` and `z` in the domain name.
+### Suggested Solution
+I have placed the link to Winteriors' Instagram page on the icon. Now when someone clicks the icon they are led to the Winteriors Instagram page.
+<!-- Add Screenshot -->
 
-## Hero
+## Issue: Misspelt email
+The link to the email is misspelt. It is written `hello@winterioz.com`. This email address does not exist.
+<!-- Add Email address validator check screenshot -->
 
-The hero section is probably missing an image to the right of the two-column view. When I hover over the placeholder circle to the right of the hero, it makes slight movements in accordance with the mouse pointer then readjusts once I leave the section.
+### Expected Behaviour
+There is a missing `r` between `o` and `z` in the domain name. The domain name is supposed to be `winteriorz.com`. We expect users to send an email to a valid email address.
 
-There is also a link with the title "SHOP NOW". When clicked the link just returns the user to the same page. It is a dead link
+### Suggested Solution
+I have placed a valid email address for Winteriors. It is `hello@winteriorz.com`. When the user clicks the email address they can send an email to the Winteriors Team.
+<!-- Add Screenshot -->
 
-## Categories Section
+## Issue: Missing image in Hero Section
 
-This is the immediate section after the hero section. It contains a grid row of categories with apparent links written "SHOP NOW →". When one clicks the link, they are taken back to the hero section. We expect that when the user clicks the link, they are taken to the respective page (or category section). So when someone clicks "HOTEL" we expect them to see something related.
+The hero section is missing an image to the right of the two-column view. 
+<!-- Add Screenshot -->
 
-## Best Selling Section
+### Expected Behaviour
+There should be an image to the right to help users visualize the business.
 
-This is the immediate section after the Categories section. Nothing appears in the section. We expect to see some furniture products that match with the theme of "Best Selling".
+### Suggested Solution
+I have placed an image of a sofa within a circle. This helps users visualize the business. They will immediately know that it's a furniture business.
+<!-- Add Screenshot -->
 
-## Featured Products Section
+## Issue: Dead link in Hero Section
 
-There is a grid of themed furniture cards. Each card has a link with the text "DISCOVER NOW →". When one clicks the link, they are taken back to the hero section. We expect that when the user clicks the link, they are taken to the respective page (or section). A card with the title "CHAIR & SOFA" has an image which appears misplaced. A third of the image is not visible. We expect to see the full image, like in the other cards.
+There is also a link with the title "SHOP NOW". Clicking the link does nothing.
+<!-- Add Screenshot -->
 
-## OUR CLIENTS
+### Expected Behaviour
+Clicking the link should lead to a section that matches the words "SHOP NOW".
 
-This section shows a scroll wheel of the clients that Winteriors has worked with. Depicted as images of the logo. Hovering over the image a pink box appears behind the logo with the "List Title". We expect to see a color which matches the color palette of the website as well as the name of the client when one hovers over the logo.
+### Suggested Solution
+I have placed the link to the Winteriors WhatsApp Catalogue on the words "SHOP NOW". Now when someone clicks the link they are taken to Winteriors WhatsApp catalogue.
+<!-- Add Screenshot -->
 
-Below the scroll wheel of clients is an image of a sofa with no caption. This can be ignored for now.
+## Issue: Dead link in Categories Section
 
-Below the image is the following text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo." This text doesn't mean anything.
+This is the immediate section after the hero section. It contains a grid row of categories with apparent links written "SHOP NOW →". When one clicks the link, they are taken back to the hero section. 
+<!-- Add Screenshot -->
+
+### Expected Behaviour
+We expect that when the user clicks the link, they are taken to the respective page (or category section). So when someone clicks "HOTEL" we expect them to see something related.
+
+### Suggested Solution
+I have placed the link to the Winteriors WhatsApp Catalogue on the words "SHOP NOW →". Clicking the link will take you to the Winteriors WhatsApp catalogue.
+<!-- Add Screenshot -->
+
+## Issue: No products in Best Selling Section
+
+This is the immediate section after the Categories section. Nothing appears in the section. 
+<!-- Add Screenshot -->
+
+### Expected Behaviour
+We expect to see some furniture products that match with the theme of "Best Selling".
+
+### Suggested Solution
+I have placed some products from your current WhatsApp catalogue. I have included the price and name of the product.
+<!-- Add Screenshot -->
+
+## Issue: Dead Link in Featured Products Section
+
+There is a grid of themed furniture cards. Each card has a link with the text "DISCOVER NOW →". When one clicks the link, they are taken back to the hero section. 
+<!-- Add Screenshot -->
+
+### Expected Behaviour
+We expect that when the user clicks the link, they are taken to the respective page (or section) with the desired content. 
+
+### Suggested Solution
+I have placed the link to the Winteriors WhatsApp Catalogue on the words "DISCOVER NOW →". Clicking the link will take you to the Winteriors WhatsApp catalogue.
+<!-- Add Screenshot -->
+
+## Issue: Misplaced image in Featured Products Section
+
+A card with the title "CHAIR & SOFA" has an image which appears misplaced. A third of the image is not visible. 
+<!-- Add Screenshot -->
+
+### Expected Behaviour
+We expect to see the full image in the card, like in the other cards.
+
+### Suggested Solution
+I readjusted the images in the cards. Now all of them appear in full in the card.
+
+## Issue: Client company names not appearing in OUR CLIENTS Section
+
+This section shows a scroll wheel of the clients that Winteriors has worked with. Depicted as images of the logo. Hovering over the image a pink box appears behind the logo with the "List Title". 
+<!-- Add Screenshot -->
+
+### Expected Behaviour
+We expect to see a color which matches the color palette of the website as well as the name of the client when one hovers over the logo.
+
+### Suggested Solution
+I did away with the hover feature. Now when a user hovers over the image nothing happens. Keeping things clean.
+<!-- Add Screenshot -->
+
+## Issue: Misplaced image below OUR CLIENTS Section
+
+Below the scroll wheel of clients is an image of a sofa with no caption.
+<!-- Add Screenshot -->
+
+### Expected Behaviour
+We expect to see some information related to the image to help the user make sense of it.
+
+### Suggested Solution
+I removed the image.
+<!-- Add Screenshot -->
+
+## Issue: Placeholder text and images
+
+There is some placeholder text above the footer of the website. This how it appears: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo." This text doesn't mean anything.
 
 Below the text is a placeholder image with no context. Then below the placeholder image is a link with the label "CLICK HERE"
+<!-- Add Screenshot -->
 
-## Footer
+### Expected Behaviour
+We expect the text and images to have some information related to Winteriors.
+
+### Suggested Solution
+I removed the placeholder image, text and link.
+<!-- Add Screenshot -->
+
+## Issue: Dead links in Footer section
 
 The footer section of the website has links. All of these links when clicked lead back to the hero section of the page. There are no corresponding pages or sections to match with the links.
+<!-- Add Screenshot -->
 
-## Home Page - Mobile View
+### Expected Behaviour
+We expect the links to lead the page or section that matches with the link's text.
 
-## Header
+### Suggested Solution
+I replaced the links in the footer with working links. These include links to the social media pages for Winteriors and links to the other sections and pages of the website.
+<!-- Add Screenshot -->
 
-The header only appears when the website is in mobile view. The header has a menu icon in mobile view. Clicking on it nothing happens. The expected behaviour is that a menu appears with links.
+## Issue: Mobile Header Menu link not working
 
-## Featured Products Section
+The header only appears when the website is in mobile view. The header has a menu icon in mobile view. Clicking on it nothing happens. 
+<!-- Add Screenshot -->
 
-The products appear slightly out of order. It's expected that each product fits nicely inside its container so that everything is visible.
+### Expected Behaviour
+The expected behaviour is that a menu appears with links.
 
-## Our Clients Section
+### Suggested Solution
+I added a Menu that works. When it is clicked a drop down of links to pages in the website appear.
+<!-- Add Screenshot -->
 
-The Our Clients section heading is too close to the last product of the "Featured Products" section. We expect there to be a reasonable gap between sections
+## Issue: Hero section of the "About Us" page
 
-## About Us page
+The hero section is a blank white space. The hero section is just below the breadcrumb bar which has the title of the page "About us" and the link breadcrumbs. This is the first thing that users see when they visit the page.
+<!-- Add Screenshot -->
 
-## Header
+### Expected Behaviour
+We expect to see some content. Either some text, images or video. 
 
-The apparent header or top bar of the website appears to be okay from initial view. However, it is clear from inspection that this is a top bar meant to complement a header. The header is absent from view.
+### Suggested Solution
+I removed the blank space and brought up the next section. This way users see some content when they visit the page.
+<!-- Add Screenshot -->
 
-Hovering over the social icon for Instagram, I noticed that the link to the Winteriors Instagram page does not appear. When one clicks the Instagram social icon nothing happens. For the Facebook social icon, the link does appear.
+## Issue: Placeholder text in Find Your Best Furniture Section of "About Us" page
 
-The link to the email is misspelt. It is written `hello@winterioz.com` whereas the domain name is supposed to be `winteriorz.com`. There is a missing `r` between `o` and `z` in the domain name.
+Below the the title of the section, there is some text which starts with "Far far away ...". This text has no relation with the website. It is just placeholder text. 
+<!-- Add Screenshot -->
 
-## Hero
+### Expected Behaviour
+We expect to see text that matches with the title "Find your best furniture"
 
-The hero section is a blank white space. More than 600px high. I don't think, that's what's expected. We expect to see some content (text, images or video) The hero section is just below the breadcrumb bar which has the title of the page "About us" and the link breadcrumbs.
+### Suggested Solution
+I replaced the placeholder with text that matches with the title.
+<!-- Add Screenshot -->
 
-## About Winteriors
+## Issue: Dead links in Find Your Best Furniture Section of "About Us" page
 
-This is the section below the Hero section. I suspect it must be what is supposed to appear in the Hero section.
+There is a link with the label "SHOP NOW →". When clicked it leads back to the hero section. 
+<!-- Add Screenshot -->
 
-## Find Your Best Furniture Section
+### Expected Behaviour
+We expect the link to lead to the `shop` page or section.
 
-Below the the title of the section, there some text which starts with "Far far away ...". This text has no relation with the website. It is just placeholder text. We expect to see text that matches with the title "Find your best furniture"
+### Suggested Solution
+I added a link to the Winteriors WhatsApp Catalogue. When a user clicks now they will be led to the Winteriors WhatsApp catalogue.
 
-There is a link with the label "SHOP NOW →". When clicked it leads back to the hero section. We expect the link to lead to the `shop` page.
+## Issue: Mangled text in Find Your Best Furniture Section of "About Us" page
 
-There is a row of boxes with information on features/services provided, like "Free Shipping" and the corresponding description like "Orders Over ZMW10,000 15k of Lusaka CBD". The description text appears all in one line with each line appearing over each other making the text  unreadable. We expect the text to be readable appearing in multiple lines if need be.
+There is a row of boxes with information on features/services provided, like "Free Shipping" and the corresponding description like "Orders Over ZMW10,000 15k of Lusaka CBD". The description text appears all in one line with each line appearing over each other making the text  unreadable. 
+<!-- Add Screenshot -->
 
-## Frequently Asked Questions Section
+### Expected Behaviour
+We expect the text to be readable appearing in multiple lines if need be.
 
-This section has questions which are answered using some text which is unrelated to the question being asked. For example, "How long will it be before I get a refund?", the answer is "Far far away ...". We expect to see an actual answer which is related to the question.
+### Suggested Solution
+I fixed the text and made sure each line is readable.
+<!-- Add Screenshot -->
 
-Below the accordion of questions is a row of social media icons. Facebook and LinkedIn to be specific. Both 
+## Issue: Placeholder text in Frequently Asked Questions Section of "About Us" page 
+
+This section has questions which are answered using some text which is unrelated to the question being asked. For example, "How long will it be before I get a refund?", the answer is "Far far away ...". 
+
+### Expected Behaviour
+We expect to see an actual answer which is related to the question.
+
+### Suggested Solution
+I replaced the placeholder text with meaningful answers to the questions provided.
+<!-- Add Screenshot -->
+
+## Issue: Links not leading to intended destination
+
+Below the accordion of questions is a row of social media icons. Facebook and LinkedIn to be specific. Both link to https://www.facebook.com.
+
+### Expected Behaviour
+We expect the links to lead us to the LinkedIn and Facebook pages of the Winteriors store.
+
+### Suggested Solution
+I replaced the links with links to Winteriors LinkedIn and Facebook pages.
+
 

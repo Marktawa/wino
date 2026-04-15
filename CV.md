@@ -2,7 +2,7 @@
 
 - Date: 08 April 2026
 - Email: markmunyaka@gmail.com
-- Website: [markmunyaka.kwamwena.link](https://markmunyaka.kwamwena.link)
+- Website: [markmunyaka.kwamwena.link](https://markmunyaka.netlify.app)
 - Phone: +260 965 982 075
 - D.O.B: 16 November 1991
 

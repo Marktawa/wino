@@ -9,6 +9,82 @@
 - Why I am suitable for the role?
 - Conclusion (Expression of good faith)
 
+**Job Role**
+- Website Management
+- Website Funnels (Contact Form on every page, Official WhatsApp Business link on every page, WhatsApp Group Signup on every page, Mailing List Sign up on every page)
+- Personal page management
+- WhatsApp Group management
+- Google Structured Data management
+- Goolge Search Results management
+- Google My Business management
+
+**First Steps**
+- Reconstruct website (home, about us, contact, shop/services, blog)
+- Send for review
+- Construct WhatsApp group ()
+- Publish website after approval
+- Ask for 6 products with details
+- Profile products (product page, article page, product list, article list, home page)
+- Publish home page, blog list, article page, shop list, product page
+
+**Sales Channels**
+- Website
+- WhatsApp Group
+- Email (Newsletter, Special Email)
+- Google My Business
+- Google Search Results
+- External (Reddit, Facebook, LinkedIn, X, Tik Tok)
+- Stories
+- Newsletter
+- Personal (Website, Social Media, Stories)
+
+**Website Fix**
+- Problem
+- Expected Behaviour
+- Suggested Solution
+
+**Deliverable**
+- Application: Markdown > HTML/CSS > pdf
+- CV: Markdown > HTML/CSS > pdf (Google Docs?)
+- Website Fix: Markdown > HTML/CSS > pdf
+
+---
+
+Conclusion will read as follows:
+
+I have attached the following documents:
+- The application in pdf format.
+- My CV in pdf format.
+- The document detailing the fixes made to the website.
+
+---
+
+Social Media Strategy: Comment as your personal profile in news updates on major pages. Even on some controversial pages. What you are searching is high engagement, then look for comments with high engagement. Make sure your story is up to date. Add your take. If a person reacts invite them to like your page
+
+
+---
+
+One of the things that emerged as I was simulating what to include in what happens in the first week is a WhatsApp group and client interaction or client management. Let's look at Client Management. I believe that this is at the core of what makes sales happen. This is the part of the process that I think needs a lot of attention. A lot of care, a lot of consideration.
+
+It involves simulating (role playing) scenarios where you would interact with a customer. Communication skills are necessary. Much attention needs to be placed making sure you put a lot of love and care into what you say. Understanding the client's needs. Being open minded and creative at the same time. Having information at hand. Answering comprehensively. Bear in mind that most client interaction will be chat app based. This maybe messages, voice notes, video notes, voice calls and video calls.
+
+WhatsApp group needs a strategy for the first week. The idea is that there is information that should be included in the description of the group. So there is a Welcome message, welcoming people to the group. Then there is an info dump to help people adjust (highlight special products on offer, link to full catalog, how to pay, for enquiries contact the Admin on ...). Future consideration is making videos that showcase the products. Annotated videos in this case.
+
+---
+
+**First Steps**
+- Construct website (home, about us, contact, shop/services, blog)
+- Ask for 5 products with details
+- Profile products (product page, article page, product list, article list, home page)
+
+This has just emerged in the whole process of this exercise. This in regards to generalizing the role of an Online Sales Officer. So in this case the pitch would be to use a generic business website as a template to annotate your proposal. The proposal may also include Social Media Management. Emphasis has to be placed on what I would like to call Responsible Social Media Management for a business, where I do things according to a thoughtful, long-lasting strategy. The mindset behind it is that one distances themselves from hype, from trends, from loose content without a purpose. Instead the strategy is integrated to a unified content strategy. A content strategy that has goals, has intentions and is done with a lot of thought and care placed into it.
+
+---
+
+I am considering to leave out AEO in the first week plan. AEO is still new territory and can be explored later on when the chance is there. I may still keep it inside the whole gist of the job proposal. I hope it can be useful.
+
+---
+
 I have decided to revise the approach of this application. I am rechanneling my effort towards what it means to be a salesman. That is to say an online salesman. One who generates leads, one who closes leads. What does it mean to sell furniture to an online audience. Of course my starting point is the clean up of the website. I hope it will work as a sign of good will and hopefully be the necessary entry point that helps facilitate them considering the full role. Hopefully, it can make them see my proposal in a good light and take it in good faith. 
 
 Let's look at what all this involves. For a start this involves the job proposal, the document detailing the website fix, my CV, application letter (so the application letter is the job proposal).
