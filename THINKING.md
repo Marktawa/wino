@@ -1,3 +1,11 @@
+## Prompt
+
+How do I check to see all the pages that are available on a website? Another way to ask the question is How do I list all the pages in a website?
+
+What options do I have to preview a markdown file in the browser? Maybe use a Static Site Generator like Hugo, Astro or Jekyll. Just pick one with a nice default theme.
+
+---
+
 **Job Proposal**
 - Introduction with Greetings
 - Job Role Overview

@@ -1,6 +1,16 @@
+Community creation within an article. Community can be a WhatsApp group or a Discord Server. Link is posted at the bottom of an article
+
+---
+
 Write articles that teach schools how to write articles covering events, developments at school, upcoming events, highlights of the week etc. The article should include the details to be concerned about for each content type then the style guide that should be followed for online publishing. Cap it off with an example article and include the processes involved in writing the article. Rough draft > Rev 1 > Rev 2 > Rev n > Publish
 
 Look for a blog template for schools and copy the UI/UX style guide or use AI to look for the blog template.
+
+---
+
+Encourage schools to make Media Clubs. A Media Club is a club responsible for publishing media releases related to the school. The members include students and teachers. The students will be responsible for writing and editing stories to be published. The teachers will be responsible for supervising the process. Typical stories to cover include events. Events like school visits/trips to specific places. Competitions with other schools and internally. Special school events like a "Careers Day", "Culture Day". Highlights of the week can also be covered. Other posts (post types) can be included in the process. These were just examples to help visualize the system. 
+
+Some aspects of the system include a process. First start is a rough draft of the story. The rough draft is then proofread to make sure there are no errors like grammar, word use and so on. After that the story is prepared for publish. Stories can be published on the website, the social media pages, the school community groups. The story should include a title, a date, a location, the authors and the editors. The stories can also follow a specific format guided by a style guide.
 
 ---
 
