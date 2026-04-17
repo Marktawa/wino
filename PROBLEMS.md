@@ -78,8 +78,8 @@ This is the immediate section after the Categories section. Nothing appears in t
 We expect to see some furniture products that match with the theme of "Best Selling".
 
 ### Suggested Solution
-I have placed some products from your current WhatsApp catalogue. I have included the price and name of the product.
-<!-- Add Screenshot -->
+I have placed some products from your current catalogue. I have included the price and name of the product.
+![Fix for Missing products in Best Selling Section](issues/fix-for-missing-products-in-best-selling-section.png)
 
 ## Issue: Dead Link in Featured Products Section
 
@@ -90,7 +90,7 @@ There is a grid of themed furniture cards. Each card has a link with the text "D
 We expect that when the user clicks the link, they are taken to the respective page (or section) with the desired content. 
 
 ### Suggested Solution
-I have placed the link to the Winteriors WhatsApp Catalogue on the words "DISCOVER NOW →". Clicking the link will take you to the Winteriors WhatsApp catalogue.
+I have placed the link to the Winteriors' website "Shop" page on the words "DISCOVER NOW →". Clicking the link will take you to the Winteriors WhatsApp catalogue.
 <!-- Add Screenshot -->
 
 ## Issue: Misplaced image in Featured Products Section

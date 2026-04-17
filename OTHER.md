@@ -1,4 +1,6 @@
-Community creation within an article. Community can be a WhatsApp group or a Discord Server. Link is posted at the bottom of an article
+Community creation within an article. Community can be a WhatsApp group or a Discord Server. Link is posted at the bottom of an article to work as a funnel. Community can start as simply as a mailing list or WhatsApp Broadcast Group or evolve to a full fledged forum.
+
+Same for articles for Scholiz. Attach a funnel to them
 
 ---
 
