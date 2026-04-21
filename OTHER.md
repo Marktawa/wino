@@ -1,3 +1,13 @@
+Apply for more of these Online Sales Representative roles to as many companies as possible with details about the role included. It would help if the company had a website which needs fixing. That would be my way in.
+
+Post an advert on Reddit about the role. Comment on other people's posts as well. Post the advert on Facebook and LinkedIn as well. Comment on popular posts
+
+Create a list of companies that may need an OSR:
+- Winteriors
+- Grin Financial Solutions
+
+---
+
 Community creation within an article. Community can be a WhatsApp group or a Discord Server. Link is posted at the bottom of an article to work as a funnel. Community can start as simply as a mailing list or WhatsApp Broadcast Group or evolve to a full fledged forum.
 
 Same for articles for Scholiz. Attach a funnel to them

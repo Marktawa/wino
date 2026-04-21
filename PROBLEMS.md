@@ -84,188 +84,183 @@ I have placed some products from your current catalogue. I have included the pri
 ## Issue: Dead Link in Featured Products Section
 
 There is a grid of themed furniture cards. Each card has a link with the text "DISCOVER NOW →". When one clicks the link, they are taken back to the hero section. 
-<!-- Add Screenshot -->
+![Dead Link in Featured Products Section](issues/dead-link-in-featured-products-section.png)
 
 ### Expected Behaviour
 We expect that when the user clicks the link, they are taken to the respective page (or section) with the desired content. 
 
 ### Suggested Solution
-I have placed the link to the Winteriors' website "Shop" page on the words "DISCOVER NOW →". Clicking the link will take you to the Winteriors WhatsApp catalogue.
-<!-- Add Screenshot -->
+I have placed the link to the Winteriors' website "Shop" page on the words "DISCOVER NOW →". Now when someone clicks the link they are taken to Winteriors website "Shop" page.
+![Fix for Dead Link in Featured Products Section](issues/fix-for-dead-link-in-featured-products-section.png)
 
 ## Issue: Misplaced image in Featured Products Section
 
-A card with the title "CHAIR & SOFA" has an image which appears misplaced. A third of the image is not visible. 
-<!-- Add Screenshot -->
+A card with the title "CHAIR & SOFA" has an image which appears out of place. A third of the image is not visible. 
+![Misplaced image in Featured Products section](issues/misplaced-image-in-featured-products-section.png)
 
 ### Expected Behaviour
 We expect to see the full image in the card, like in the other cards.
 
 ### Suggested Solution
 I readjusted the images in the cards. Now all of them appear in full in the card.
+![Fix for misplaced image in Feature Products section](issues/fix-for-misplaced-product-image-in-featured-products.png)
 
 ## Issue: Client company names not appearing in OUR CLIENTS Section
 
 This section shows a scroll wheel of the clients that Winteriors has worked with. Depicted as images of the logo. Hovering over the image a pink box appears behind the logo with the "List Title". 
-<!-- Add Screenshot -->
+![No client title](issues/no-client-title.png)
 
 ### Expected Behaviour
 We expect to see a color which matches the color palette of the website as well as the name of the client when one hovers over the logo.
 
 ### Suggested Solution
 I did away with the hover feature. Now when a user hovers over the image nothing happens. Keeping things clean.
-<!-- Add Screenshot -->
+![Fix for No client title](issues/no-client-title.png)
 
-## Issue: Misplaced image below OUR CLIENTS Section
+## Issue: Misplaced images below OUR CLIENTS Section
 
-Below the scroll wheel of clients is an image of a sofa with no caption.
-<!-- Add Screenshot -->
+Below the scroll wheel of clients is an image of a sofa with no meaningful caption. 
+
+There is some placeholder text below the image. This how it appears: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo." This text doesn't mean anything.
+
+Below the text is a placeholder image with no context. Then below the placeholder image is a link with the label "CLICK HERE"
+![Misplaced images below Our Clients Section](misplaced-images-below-our-clients-section.png)
 
 ### Expected Behaviour
 We expect to see some information related to the image to help the user make sense of it.
 
 ### Suggested Solution
-I removed the image.
-<!-- Add Screenshot -->
-
-## Issue: Placeholder text and images
-
-There is some placeholder text above the footer of the website. This how it appears: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo." This text doesn't mean anything.
-
-Below the text is a placeholder image with no context. Then below the placeholder image is a link with the label "CLICK HERE"
-<!-- Add Screenshot -->
-
-### Expected Behaviour
-We expect the text and images to have some information related to Winteriors.
-
-### Suggested Solution
-I removed the placeholder image, text and link.
-<!-- Add Screenshot -->
+I removed the images, text and link.
+![Fix for misplaced images below Our Clients Section](fix-for-misplaced-images-below-our-clients-section.png)
 
 ## Issue: Dead links in Footer section
 
 The footer section of the website has links. All of these links when clicked lead back to the hero section of the page. There are no corresponding pages or sections to match with the links.
-<!-- Add Screenshot -->
+![Dead links in Footer section](issues/dead-links-in-footer-section.png)
 
 ### Expected Behaviour
 We expect the links to lead the page or section that matches with the link's text.
 
 ### Suggested Solution
 I replaced the links in the footer with working links. These include links to the social media pages for Winteriors and links to the other sections and pages of the website.
-<!-- Add Screenshot -->
+![Fix for Dead links in Footer section](issues/fix-for-dead-links-in-footer-section.png)
 
-## Issue: Mobile Header Menu link not working
+## Issue: Mobile Header Menu link not responsive
 
-The header only appears when the website is in mobile view. The header has a menu icon in mobile view. Clicking on it nothing happens. 
-<!-- Add Screenshot -->
+The header only appears when the website is in mobile view. The header has a menu button in mobile view. The menu button is not responsive. Nothing happens when you click on it. 
+![Mobile Header Menu link not responsive](issues/mobile-header-menu-not-responsive.png)
 
 ### Expected Behaviour
 The expected behaviour is that a menu appears with links.
 
 ### Suggested Solution
 I added a Menu that works. When it is clicked a drop down of links to pages in the website appear.
-<!-- Add Screenshot -->
+![Fix for Mobile Header Menu not responsive](issues/fix-for-mobile-header-menu-not-responsive.png)
 
-## Issue: Hero section of the "About Us" page
+## Issue: Large Blank Space in Hero section of the "About Us" page
 
 The hero section is a blank white space. The hero section is just below the breadcrumb bar which has the title of the page "About us" and the link breadcrumbs. This is the first thing that users see when they visit the page.
-<!-- Add Screenshot -->
+![Large Blank Space in Hero section of About Us page](issues/blank-space-in-hero-section-of-about-us-page)
 
 ### Expected Behaviour
 We expect to see some content. Either some text, images or video. 
 
 ### Suggested Solution
 I removed the blank space and brought up the next section. This way users see some content when they visit the page.
-<!-- Add Screenshot -->
+![Fix for Large Blank Space in Hero section of About Us page](issues/fix-for-blank-space-in-hero-section-of-about-us-page)
 
 ## Issue: Placeholder text in Find Your Best Furniture Section of "About Us" page
 
 Below the the title of the section, there is some text which starts with "Far far away ...". This text has no relation with the website. It is just placeholder text. 
-<!-- Add Screenshot -->
+![Placeholder text in Find Your Best Furniture Section of "About Us" page](issues/placeholder-text-in-find-your-best-furniture-section.png)
 
 ### Expected Behaviour
 We expect to see text that matches with the title "Find your best furniture"
 
 ### Suggested Solution
 I replaced the placeholder with text that matches with the title.
-<!-- Add Screenshot -->
+![Fix for placeholder text in Find Your Best Furniture Section of "About Us" page](issues/fix-for-placeholder-text-in-find-your-best-furniture-section.png)
 
-## Issue: Dead links in Find Your Best Furniture Section of "About Us" page
+## Issue: Dead link in Find Your Best Furniture Section of "About Us" page
 
 There is a link with the label "SHOP NOW →". When clicked it leads back to the hero section. 
-<!-- Add Screenshot -->
+![Dead link in Find Your Best Furniture Section of "About Us" page](issues/dead-link-in-find-your-best-furniture-section.png)
 
 ### Expected Behaviour
-We expect the link to lead to the `shop` page or section.
+We expect the link to lead to the "Shop" page or section.
 
 ### Suggested Solution
-I added a link to the Winteriors WhatsApp Catalogue. When a user clicks now they will be led to the Winteriors WhatsApp catalogue.
+I have placed the link to the Winteriors' website "Shop" page on the words "SHOP NOW →". Now when someone clicks the link they are taken to Winteriors website "Shop" page.
+![Fix for Dead link in Find Your Best Furniture Section of "About Us" page](issues/fix-for-dead-link-in-find-your-best-furniture-section.png)
+
 
 ## Issue: Mangled text in Find Your Best Furniture Section of "About Us" page
 
-There is a row of boxes with information on features/services provided, like "Free Shipping" and the corresponding description like "Orders Over ZMW10,000 15k of Lusaka CBD". The description text appears all in one line with each line appearing over each other making the text  unreadable. 
-<!-- Add Screenshot -->
+There is a row of boxes with information on features/services provided, like "Free Shipping" and the corresponding description like "Orders Over ZMW10,000 15k of Lusaka CBD". The description text appears all in one line with each line appearing over each other making the text unreadable. 
+![Mangled Text in Find Your Best Section of About Us page](issues/mangled-text-in-find-your-best-furniture-section.png)
 
 ### Expected Behaviour
 We expect the text to be readable appearing in multiple lines if need be.
 
 ### Suggested Solution
 I fixed the text and made sure each line is readable.
-<!-- Add Screenshot -->
+![Fix for mangled text in Find Your Best Section of "About Us" page](issues/fix-for-mangled-text-in-find-your-best-furniture-section.png)
 
 ## Issue: Placeholder text in Frequently Asked Questions Section of "About Us" page 
 
 This section has questions which are answered using some text which is unrelated to the question being asked. For example, "How long will it be before I get a refund?", the answer is "Far far away ...". 
-<!-- Add Screenshot -->
+![Placeholder text in the FAQ section](placeholder-text-in-faq-section.png)
 
 ### Expected Behaviour
 We expect to see an actual answer which is related to the question.
 
 ### Suggested Solution
 I replaced the placeholder text with meaningful answers to the questions provided.
-<!-- Add Screenshot -->
+![Fix for Placeholder text in FAQ section](issues/fix-for-placeholder-text-in-faq-section.png)
 
-## Issue: Links not leading to intended destination in "About Us" page
+## Issue: Dead Links in Frequently Asked Questions Section of "About Us" page
 
 Below the accordion of questions is a row of social media icons. Facebook and LinkedIn to be specific. Both link to https://www.facebook.com.
+![Dead Links in FAQ section](issues/dead-links-in-faq-section.png)
 
 ### Expected Behaviour
 We expect the links to lead us to the LinkedIn and Facebook pages of the Winteriors store.
 
 ### Suggested Solution
 I replaced the links with links to Winteriors LinkedIn and Facebook pages.
-<!-- Add Screenshot -->
+![Fix for Dead Links in FAQ section](issues/fix-for-dead-links-in-faq-section.png)
 
 ## Issue: Social Media Links not visible in Meet The Team section of "About Us" page
 
 The Social Media Links together with the icons for some of the Winteriors staff in the Meet The Team section are not visible.
-<!-- Add Screenshot -->
+![Social Media links not visible in Meet The Team section](issues/social-media-links-not-visible-in-meet-the-team-section.png)
 
 ### Expected Behaviour
 We should see the social media links for all the Winteriors staff members on display
 
 ### Suggested Solution
-I made the Social media links and icons for all of the Winteriors staff members on display visible. Now when someone clicks the link they are taken to the respective memeber's social media page.
-<!-- Add Screenshot -->
+I made the Social media links and icons for all of the Winteriors staff members on display visible. Now when someone clicks the link they are taken to the respective member's social media page.
+![Fix for Social Media links not visible in Meet The Team section](issues/fix-for-social-media-links-not-visible-in-meet-the-team-section.png)
 
 ## Issue: No products displayed in "Shop" page
 
 The shop page for the Winteriors website does not have any products on display. Also some of the text needs to be cleaned up.
-<!-- Add Screenshot -->
+![No products in Shop page](issues/no-products-in-shop-page.png)
 
 ### Expected Behaviour
 We expect to see some furniture products when one visits the WInteriors shop page.
 
 ### Suggested Solution
-I have added some products to the shop page. I have included the product price and name. I got the products from the Winteriors Whatsapp account.
-<!-- Add Screenshot -->
+I have added some products to the shop page. I have included the product image, price and name. I got the products from the Winteriors social media pages.
+![Fix for no products in Shop page](issues/fix-for-no-products-in-shop-page.png)
 
 ## Issue: Text not in line in "Contact Us" page
+
 The text for the Working Hours section of the "Contact Us" page appears slightly out of place.
-<!-- Add Screenshot -->
+![Text not in line in "Contact Us" page](issues/text-not-in-line-in-contact-us-page)
 
 ### Suggested Solution
 I made some minor adjustments to the page so that all the text appears in line and in place.
-<!-- Add Screenshot -->
+![Fix for Text not in line in "Contact Us" page](issues/fix-for-text-not-in-line-in-contact-us-page)
 
 

@@ -1,3 +1,94 @@
+Reproduce the Contact Us page based on the screenshot provided and the details below
+
+## Contact Us page
+
+### Hero Section
+- Content max-width is 1140px in the center with no side padding
+- Top and bottom padding is 60px
+- Heading font size is 24px, color is #292929
+- Breadcrumb font size is 16px, color is #7A7A7A, arrow color is #D1BC92;
+
+### Submit a Request section
+- Content max-width is 1140px in the center with no side padding
+- Top and bottom padding is 100px
+- Heading font size is 24px, color is #292929
+- Paragraph font size is 16px, color is #7A7A7A
+- Inner headings font size is 18px, color is #000000
+- Inner headings paragraph size is 16px, color is #656565
+- Font Awesome icon
+- Contact form font size is 15px, button font-size is 16px
+
+### Map section
+- Location is https://maps.google.com/maps?q=Chamba%20Valley%20Mall&t=m&z=18&output=embed&iwloc=near
+
+
+- Use Segou UI for font
+
+## Prompt 
+
+Adjust the FAQ section with the following details:
+- Change max-width for faq-section from 1200px to 1140px
+- Remove right and left padding for faq section
+- Remove top border for first accordion item
+- Remove last border for last accordion item
+- Adjust image width from 420px to 540px (Height is auto)
+- Replace the SVG social media icons with Font Awesome icons
+- On hover the a circle should appear behind the social media icons
+- Change letter spacing for FAQ section heading from 0.12em to 1.5px
+
+## Prompt
+
+Reproduce this section as seen: Find Your Best Furniture.
+- Heading Font size: 24px 
+- Paragraph and other sections font-size: 16px
+- Shop Now link and percentage font-size: 14px
+- Use Font Awesome for icons
+
+Use Font Awesome for icons 
+
+## Prompt
+
+Create a revised About Us page. Remove the blank white space.
+- Use Segou UI for the font for now
+- The image at the bottom is found at https://winteriorz.com/wp-content/uploads/2024/08/Cream-and-Green-Classic-Neutrals-Interior-Designer-Instagram-Post-1024x1024.png
+- Just produce the breadcrumb and the hero section. Do not produce any other section
+
+### Breadcrumb Bar
+- max-width: 1140px
+- padding-top: 60px
+- padding-bottom: 60px
+- ABOUT US Heading - font-size: 24px
+- Home > About - font-size: 16px
+
+### About Winteriors Section
+- Heading font-size: 24px
+- Paragraph  font-size: 16px
+- Shop Now link font-size: 14px
+
+
+
+
+## Winteriors Website Pages
+
+- home
+- shop
+- about
+- contact
+
+- blog
+- product
+- article
+
+You should include the "Get Discount Info" section in the home page of the website. Put it below the "Our Clients" section.
+
+For prompting purposes do remove the Header, Footer and the Get Discount Info sections. Include the home page, screenshot of desired page from Winnie website then the actual
+
+The blank white space for the About Us page was supposed to have a slide show. Later find a way to update it to use a slideshow
+
+Inspect the code for each page, to look for any desired behaviour that is not present, might help in the suggested solutions section
+
+---
+
 ## Prompt
 
 How do I check to see all the pages that are available on a website? Another way to ask the question is How do I list all the pages in a website?
@@ -68,7 +159,6 @@ I have attached the following documents:
 ---
 
 Social Media Strategy: Comment as your personal profile in news updates on major pages. Even on some controversial pages. What you are searching is high engagement, then look for comments with high engagement. Make sure your story is up to date. Add your take. If a person reacts invite them to like your page
-
 
 ---
 

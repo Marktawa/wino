@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Winteriors</title>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Base Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffffff;
+            color: #333;
+        }
+
+        /* Container Rules - Strict width and no side padding as requested */
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding-left: 0;
+            padding-right: 0;
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: #f8f8f8; /* Very light gray background matching image */
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+
+        .hero-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .hero h1 {
+            font-size: 24px;
+            color: #292929;
+            margin: 0;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .breadcrumb {
+            font-size: 16px;
+            color: #7A7A7A;
+        }
+
+        .breadcrumb .arrow {
+            color: #D1BC92;
+            margin: 0 5px;
+        }
+
+        /* Submit a Request Section */
+        .contact-section {
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+
+        .contact-wrapper {
+            display: flex;
+            gap: 80px;
+            align-items: flex-start;
+        }
+
+        .contact-info {
+            flex: 1;
+        }
+
+        .contact-info h2 {
+            font-size: 24px;
+            color: #292929;
+            margin: 0 0 20px 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .contact-info > p {
+            font-size: 16px;
+            color: #7A7A7A;
+            line-height: 1.6;
+            margin-bottom: 50px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            row-gap: 40px;
+            column-gap: 20px;
+        }
+
+        .info-item {
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
+        }
+
+        .info-item i {
+            font-size: 20px;
+            color: #444; /* Subtle dark color for icons */
+            margin-top: 3px;
+        }
+
+        .info-text h3 {
+            font-size: 18px;
+            color: #000000;
+            margin: 0 0 5px 0;
+            text-transform: uppercase;
+        }
+
+        .info-text p {
+            font-size: 16px;
+            color: #656565;
+            margin: 0;
+            line-height: 1.5;
+            white-space: pre-line; /* Allows line breaks to render properly */
+        }
+
+        /* Form Styling */
+        .contact-form {
+            flex: 1;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .form-row.split {
+            display: flex;
+            gap: 30px;
+        }
+
+        .form-row.split input {
+            flex: 1;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid #e5e5e5;
+            padding: 10px 0;
+            font-size: 15px;
+            font-family: inherit;
+            color: #333;
+            background: transparent;
+            box-sizing: border-box;
+            transition: border-bottom-color 0.3s;
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+            color: #b0b0b0;
+        }
+
+        input:focus,
+        textarea:focus {
+            outline: none;
+            border-bottom-color: #292929;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 40px;
+        }
+
+        .file-upload {
+            border-bottom: 1px solid #e5e5e5;
+            padding-bottom: 10px;
+        }
+
+        input[type="file"] {
+            font-size: 15px;
+            color: #7a7a7a;
+            cursor: pointer;
+        }
+
+        /* Standardize the file input appearance slightly */
+        input[type="file"]::file-selector-button {
+            border: 1px solid #ccc;
+            background: #f9f9f9;
+            padding: 2px 8px;
+            border-radius: 0;
+            margin-right: 10px;
+            cursor: pointer;
+            color: #333;
+        }
+
+        button.submit-btn {
+            background-color: #292929;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 16px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+
+        button.submit-btn:hover {
+            background-color: #111111;
+        }
+
+        /* Map Section */
+        .map-section {
+            padding-bottom: 100px;
+        }
+
+        .map-section iframe {
+            width: 100%;
+            height: 450px;
+            border: none;
+            display: block;
+            /* Applying grayscale filter to match the screenshot aesthetic */
+            filter: grayscale(100%) contrast(1.1);
+        }
+
+        /* Basic Responsiveness */
+        @media (max-width: 900px) {
+            .contact-wrapper {
+                flex-direction: column;
+            }
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero-inner {
+                padding: 0 20px; /* Adding some padding back for mobile readability */
+            }
+            .contact-section .container,
+            .map-section .container {
+                padding: 0 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-inner">
+            <h1>CONTACT</h1>
+            <div class="breadcrumb">
+                Home <span class="arrow">&gt;</span> Contact
+            </div>
+        </div>
+    </section>
+
+    <!-- Submit a Request Section -->
+    <section class="contact-section">
+        <div class="container contact-wrapper">
+            
+            <!-- Left Info Area -->
+            <div class="contact-info">
+                <h2>SUBMIT A REQUEST</h2>
+                <p>At Winteriors, we are driven by a passion for manufacturing high quality, durable furniture that is comfortable, well priced , sleek modern design, and affordability—perfect for both your home and commercial spaces.</p>
+                
+                <div class="info-grid">
+                    <div class="info-item">
+                        <i class="fa-regular fa-clock"></i>
+                        <div class="info-text">
+                            <h3>OPEN HOURS</h3>
+                            <p>Mon – Fri: 8:30 – 17:00 hrs
+Sat: 09:00 – 17:00 hrs
+Sun: 11:00 – 17:00 hrs</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fa-solid fa-phone-volume"></i>
+                        <div class="info-text">
+                            <h3>PHONE NUMBER</h3>
+                            <p>+260 979 490816</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div class="info-text">
+                            <h3>OUR LOCATION</h3>
+                            <p>Chamba Valley Mall</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fa-regular fa-envelope"></i>
+                        <div class="info-text">
+                            <h3>OUR EMAILS</h3>
+                            <p>hello@winteriorz.com
+commercial@winteriorz.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Form Area -->
+            <div class="contact-form">
+                <form action="#" method="POST">
+                    <div class="form-row split">
+                        <input type="text" placeholder="Name" required>
+                        <input type="text" placeholder="Phone">
+                    </div>
+                    
+                    <div class="form-row">
+                        <input type="email" placeholder="Email" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <textarea placeholder="Message" required></textarea>
+                    </div>
+                    
+                    <div class="form-row file-upload">
+                        <input type="file" id="file" name="file">
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">SEND MESSAGE</button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <iframe 
+                src="https://maps.google.com/maps?q=Chamba%20Valley%20Mall&t=m&z=16&output=embed&iwloc=near" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </section>
+
+</body>
+</html>

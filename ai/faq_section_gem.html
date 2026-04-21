@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequently Asked Questions</title>
+    <!-- Font Awesome CDN for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Base Styling */
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .faq-section {
+            padding: 80px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .faq-container {
+            max-width: 1140px;
+            width: 100%;
+            display: flex;
+            gap: 60px;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+
+        /* Left Column - Image */
+        .faq-image-container {
+            flex: 1;
+            max-width: 540px;
+        }
+
+        .faq-image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+            background-color: #f0f0f0;
+        }
+
+        /* Right Column - FAQ Content */
+        .faq-content {
+            flex: 1;
+        }
+
+        .faq-content h2 {
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            margin-top: 0;
+            margin-bottom: 30px;
+            color: #222;
+        }
+
+        /* Accordion Styling */
+        .accordion-item {
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .accordion-header {
+            font-size: 16px;
+            font-weight: 500;
+            color: #333;
+            padding: 20px 0;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transition: color 0.3s ease;
+            user-select: none;
+        }
+
+        .accordion-header i {
+            font-size: 12px;
+            width: 15px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        /* Active State for Expanded Item */
+        .accordion-item.active .accordion-header {
+            color: #cfb88f; /* Tan/Gold color */
+        }
+
+        .accordion-body {
+            display: none; /* Hidden by default */
+            padding: 0 0 25px 30px;
+        }
+
+        .accordion-item.active .accordion-body {
+            display: block; /* Shown when active */
+        }
+
+        .accordion-body p {
+            font-size: 16px;
+            color: #888;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* Social Icons Footer */
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .social-icons a {
+            color: #222;
+            font-size: 18px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #cfb88f;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 900px) {
+            .faq-container {
+                flex-direction: column;
+                gap: 40px;
+            }
+            .faq-image-container {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="faq-section">
+        <div class="faq-container">
+            
+            <!-- Left Side Image -->
+            <div class="faq-image-container">
+                <img src="https://winteriorz.com/wp-content/uploads/2024/07/interior-of-modern-living-room-with-sofa-3-d-rendering.jpg">
+            </div>
+
+            <!-- Right Side FAQ -->
+            <div class="faq-content">
+                <h2>FREQUENTLY ASKED QUESTIONS</h2>
+                
+                <div class="accordion">
+                    <!-- Item 1 -->
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <i class="fa-solid fa-chevron-right"></i> Which credit cards do you accept?
+                        </div>
+                        <div class="accordion-body">
+                            <p>We accept all major credit cards including Visa, MasterCard, and American Express. We also support secure digital payments through standard mobile money platforms and direct bank transfers.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <i class="fa-solid fa-chevron-right"></i> What courier do you use for deliveries?
+                        </div>
+                        <div class="accordion-body">
+                            <p>For local deliveries within the CBD, we use our dedicated in-house delivery team to ensure your furniture arrives safely. For further destinations, we partner with trusted national freight carriers.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 (Active by default based on the image) -->
+                    <div class="accordion-item active">
+                        <div class="accordion-header">
+                            <i class="fa-solid fa-chevron-up"></i> How long will it be before I get a refund?
+                        </div>
+                        <div class="accordion-body">
+                            <p>Once we receive and inspect your returned item, refunds are typically processed within 3 to 5 business days. Depending on your bank or credit card provider, please allow an additional 2 to 4 business days for the funds to officially reflect in your account.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Social Icons underneath -->
+        <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+    </section>
+
+    <!-- JavaScript for Accordion Functionality -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const accordionHeaders = document.querySelectorAll(".accordion-header");
+
+            accordionHeaders.forEach(header => {
+                header.addEventListener("click", function() {
+                    const currentItem = this.parentElement;
+                    const isActive = currentItem.classList.contains("active");
+
+                    // Close all accordion items first
+                    document.querySelectorAll(".accordion-item").forEach(item => {
+                        item.classList.remove("active");
+                        const icon = item.querySelector("i");
+                        // Reset all icons to point right
+                        icon.classList.remove("fa-chevron-up");
+                        icon.classList.add("fa-chevron-right");
+                    });
+
+                    // If the clicked item wasn't active, open it
+                    if (!isActive) {
+                        currentItem.classList.add("active");
+                        const icon = this.querySelector("i");
+                        // Change icon to point up
+                        icon.classList.remove("fa-chevron-right");
+                        icon.classList.add("fa-chevron-up");
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

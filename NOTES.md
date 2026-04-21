@@ -1,3 +1,16 @@
+## Winteriors Website Pages
+
+- home
+- shop
+- about
+- contact
+
+- blog
+- product
+- article
+
+You should include the "Get Discount Info" section in the home page of the website. Put it below the "Our Clients" section.
+
 ## Online Sales Associate
 
 I have noticed that you sometimes post videos on your social media pages. I can repackage these on the website and make them search engine friendly so that the website gets more visitors and the quality videos get more visibility. Making them search engine friendly involves transcribing the videos, adding captions, add an article and page associated with the video.

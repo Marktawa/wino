@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meet the Team – Winteriors</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f4f4f6;
+      color: #222;
+    }
+
+    /* ── Section wrapper ── */
+    .team-section {
+      padding: 80px 0 100px;
+      max-width: 1140px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .team-section h2 {
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #1a1a1a;
+      margin-bottom: 16px;
+    }
+
+    .team-section .subtitle {
+      font-size: 16px;
+      color: #777;
+      max-width: 680px;
+      margin: 0 auto 28px;
+      line-height: 1.6;
+    }
+
+    /* Decorative dots + dash */
+    .divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      margin-bottom: 48px;
+    }
+
+    .divider span {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #2563eb;
+      opacity: 0.35;
+      display: inline-block;
+    }
+
+    .divider .dash {
+      width: 32px;
+      height: 3px;
+      background: #2563eb;
+      opacity: 1;
+    }
+
+    /* ── Cards grid ── */
+    .team-grid {
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* ── Individual card ── */
+    .team-card {
+      width: 220px;
+      background: #fff;
+      border-radius: 0;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .team-card:hover {
+      box-shadow: 0 8px 30px rgba(0,0,0,0.14);
+    }
+
+    /* Photo area */
+    .card-photo {
+      background: #d9c4ad;
+      height: 220px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    /* Beige circle backdrop */
+    .card-photo::before {
+      content: '';
+      position: absolute;
+      top: 18px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 155px;
+      height: 155px;
+      border-radius: 50%;
+      background: #c9a882;
+      z-index: 0;
+    }
+
+    .card-photo img {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+    }
+
+    /* Fallback avatar when image fails */
+    .card-photo .avatar-fallback {
+      position: relative;
+      z-index: 1;
+      width: 110px;
+      height: 160px;
+      background: linear-gradient(180deg, #b8966a 0%, #8a6e4a 100%);
+      border-radius: 55px 55px 0 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card-photo .avatar-fallback i {
+      font-size: 64px;
+      color: rgba(255,255,255,0.6);
+      margin-top: 16px;
+    }
+
+    /* Info area */
+    .card-info {
+      padding: 24px 16px 22px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex: 1;
+      background: #fff;
+      transition: background 0.3s ease;
+    }
+
+    .card-info .name {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #1a1a1a;
+      text-align: center;
+      line-height: 1.2;
+      margin-bottom: 8px;
+      transition: color 0.3s ease;
+    }
+
+    .card-info .role {
+      font-size: 14px;
+      color: #888;
+      text-align: center;
+      margin-bottom: 20px;
+      transition: color 0.3s ease;
+    }
+
+    /* Social icons row */
+    .card-socials {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .card-socials a {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: #f0f0f5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #555;
+      font-size: 13px;
+      text-decoration: none;
+      transition: background 0.25s ease, color 0.25s ease;
+    }
+
+    .card-socials a:hover {
+      background: #2563eb;
+      color: #fff;
+    }
+
+    /* ── HOVER STATE ── */
+    .team-card:hover .card-info {
+      background: #1e3a8a;
+    }
+
+    .team-card:hover .card-info .name {
+      color: #fff;
+    }
+
+    .team-card:hover .card-info .role {
+      color: #93c5fd;
+    }
+
+    .team-card:hover .card-socials a {
+      background: rgba(255,255,255,0.18);
+      color: #fff;
+    }
+
+    .team-card:hover .card-socials a:hover {
+      background: rgba(255,255,255,0.38);
+      color: #fff;
+    }
+
+    /* Bottom rule */
+    .section-rule {
+      max-width: 1140px;
+      margin: 0 auto;
+      border: none;
+      border-top: 1px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="team-section">
+
+    <h2>Meet the Team</h2>
+    <p class="subtitle">Meet our dedicated team, passionate and committed to excellence, bringing living spaces to life with craftsmanship and creativity.</p>
+
+    <!-- Decorative divider -->
+    <div class="divider">
+      <span></span>
+      <span></span>
+      <span></span>
+      <div class="dash"></div>
+    </div>
+
+    <!-- Cards -->
+    <div class="team-grid">
+
+      <!-- Winnie Kanyanta -->
+      <div class="team-card">
+        <div class="card-photo">
+          <img src="https://winteriorz.com/wp-content/uploads/2024/08/1.png" alt="Winnie Kanyanta">
+        </div>
+        <div class="card-info">
+          <div class="name">Winnie<br>Kanyanta</div>
+          <div class="role">Managing Director</div>
+          <div class="card-socials">
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Aaron Mondoka -->
+      <div class="team-card">
+        <div class="card-photo">
+          <img src="https://winteriorz.com/wp-content/uploads/2024/08/2.png" alt="Aaron Mondoka">
+        </div>
+        <div class="card-info">
+          <div class="name">Aaron<br>Mondoka</div>
+          <div class="role">Commercial Specialist</div>
+          <div class="card-socials">
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="X / Twitter"><i class="fab fa-x-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mutinta Sumwaumwa -->
+      <div class="team-card">
+        <div class="card-photo">
+          <img src="https://winteriorz.com/wp-content/uploads/2024/08/Neutral-Pink-Modern-Circle-Shape-LinkedIn-Profile-Picture-3.png" alt="Mutinta Sumwaumwa">
+        </div>
+        <div class="card-info">
+          <div class="name">Mutinta<br>Sumwaumwa</div>
+          <div class="role">Design and Sales Associate</div>
+          <div class="card-socials">
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="X / Twitter"><i class="fab fa-x-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Emmanuel Chipulu -->
+      <div class="team-card">
+        <div class="card-photo">
+          <img src="https://winteriorz.com/wp-content/uploads/2024/08/Neutral-Pink-Modern-Circle-Shape-LinkedIn-Profile-Picture.png" alt="Emmanuel Chipulu">
+        </div>
+        <div class="card-info">
+          <div class="name">Emmanuel<br>Chipulu</div>
+          <div class="role">Production Lead</div>
+          <div class="card-socials">
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="X / Twitter"><i class="fab fa-x-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="section-rule">
+
+</body>
+</html>
