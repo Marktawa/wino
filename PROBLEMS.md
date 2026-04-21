@@ -96,7 +96,7 @@ I have placed the link to the Winteriors' website "Shop" page on the words "DISC
 ## Issue: Misplaced image in Featured Products Section
 
 A card with the title "CHAIR & SOFA" has an image which appears out of place. A third of the image is not visible. 
-![Misplaced image in Featured Products section](issues/misplaced-image-in-featured-products-section.png)
+![Misplaced image in Featured Products section](issues/misplaced-image-featured-products-section.png)
 
 ### Expected Behaviour
 We expect to see the full image in the card, like in the other cards.
@@ -115,7 +115,7 @@ We expect to see a color which matches the color palette of the website as well 
 
 ### Suggested Solution
 I did away with the hover feature. Now when a user hovers over the image nothing happens. Keeping things clean.
-![Fix for No client title](issues/no-client-title.png)
+![Fix for No client title](issues/fix-for-no-client-title.png)
 
 ## Issue: Misplaced images below OUR CLIENTS Section
 
@@ -124,19 +124,19 @@ Below the scroll wheel of clients is an image of a sofa with no meaningful capti
 There is some placeholder text below the image. This how it appears: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo." This text doesn't mean anything.
 
 Below the text is a placeholder image with no context. Then below the placeholder image is a link with the label "CLICK HERE"
-![Misplaced images below Our Clients Section](misplaced-images-below-our-clients-section.png)
+![Misplaced images below Our Clients Section](issues/misplaced-images-below-our-clients-section.png)
 
 ### Expected Behaviour
 We expect to see some information related to the image to help the user make sense of it.
 
 ### Suggested Solution
 I removed the images, text and link.
-![Fix for misplaced images below Our Clients Section](fix-for-misplaced-images-below-our-clients-section.png)
+![Fix for misplaced images below Our Clients Section](issues/fix-for-misplaced-images-below-our-clients-section.png)
 
 ## Issue: Dead links in Footer section
 
 The footer section of the website has links. All of these links when clicked lead back to the hero section of the page. There are no corresponding pages or sections to match with the links.
-![Dead links in Footer section](issues/dead-links-in-footer-section.png)
+![Dead links in Footer section](issues/dead-links-footer-section.png)
 
 ### Expected Behaviour
 We expect the links to lead the page or section that matches with the link's text.
@@ -160,14 +160,14 @@ I added a Menu that works. When it is clicked a drop down of links to pages in t
 ## Issue: Large Blank Space in Hero section of the "About Us" page
 
 The hero section is a blank white space. The hero section is just below the breadcrumb bar which has the title of the page "About us" and the link breadcrumbs. This is the first thing that users see when they visit the page.
-![Large Blank Space in Hero section of About Us page](issues/blank-space-in-hero-section-of-about-us-page)
+![Large Blank Space in Hero section of About Us page](issues/blank-space-in-hero-section-of-about-us-page.png)
 
 ### Expected Behaviour
 We expect to see some content. Either some text, images or video. 
 
 ### Suggested Solution
 I removed the blank space and brought up the next section. This way users see some content when they visit the page.
-![Fix for Large Blank Space in Hero section of About Us page](issues/fix-for-blank-space-in-hero-section-of-about-us-page)
+![Fix for Large Blank Space in Hero section of About Us page](issues/fix-for-blank-space-in-hero-section-of-about-us-page.png)
 
 ## Issue: Placeholder text in Find Your Best Furniture Section of "About Us" page
 
@@ -209,7 +209,7 @@ I fixed the text and made sure each line is readable.
 ## Issue: Placeholder text in Frequently Asked Questions Section of "About Us" page 
 
 This section has questions which are answered using some text which is unrelated to the question being asked. For example, "How long will it be before I get a refund?", the answer is "Far far away ...". 
-![Placeholder text in the FAQ section](placeholder-text-in-faq-section.png)
+![Placeholder text in the FAQ section](issues/placeholder-text-in-faq-section.png)
 
 ### Expected Behaviour
 We expect to see an actual answer which is related to the question.
@@ -257,10 +257,10 @@ I have added some products to the shop page. I have included the product image, 
 ## Issue: Text not in line in "Contact Us" page
 
 The text for the Working Hours section of the "Contact Us" page appears slightly out of place.
-![Text not in line in "Contact Us" page](issues/text-not-in-line-in-contact-us-page)
+![Text not in line in "Contact Us" page](issues/text-not-in-line-in-contact-us-page.png)
 
 ### Suggested Solution
 I made some minor adjustments to the page so that all the text appears in line and in place.
-![Fix for Text not in line in "Contact Us" page](issues/fix-for-text-not-in-line-in-contact-us-page)
+![Fix for Text not in line in "Contact Us" page](issues/fix-for-text-not-in-line-in-contact-us-page.png)
 
 
