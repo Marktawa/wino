@@ -1,6 +1,8 @@
 Apply for more of these Online Sales Representative roles to as many companies as possible with details about the role included. It would help if the company had a website which needs fixing. That would be my way in.
 
-Post an advert on Reddit about the role. Comment on other people's posts as well. Post the advert on Facebook and LinkedIn as well. Comment on popular posts
+Post an advert on Reddit about the role. Comment on other people's posts as well. Post the advert on Facebook and LinkedIn as well. Comment on popular posts.
+- Have a detailed blog article that dives deep into the role
+- Create a mailing list funnel and a WhatsApp group funnel
 
 Create a list of companies that may need an OSR:
 - Winteriors

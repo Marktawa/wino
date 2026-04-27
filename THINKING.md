@@ -1,3 +1,7 @@
+
+
+---
+
 Reproduce the Contact Us page based on the screenshot provided and the details below
 
 ## Contact Us page
@@ -64,9 +68,6 @@ Create a revised About Us page. Remove the blank white space.
 - Heading font-size: 24px
 - Paragraph  font-size: 16px
 - Shop Now link font-size: 14px
-
-
-
 
 ## Winteriors Website Pages
 
